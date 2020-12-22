@@ -15,7 +15,7 @@
         <div class="jumbotron">
             <h1 class="display-4 text-center">Генератор имен диких!</h1>
             <hr class="my-4">
-            <p class="lead text-center">{{ $names['fullName'] }}</p>
+            <h3 class="lead text-center">{{ $names['fullName'] }}</h3>
             <p class="lead">
                 <a class="btn btn-success btn-lg d-flex justify-content-center" href="/" role="button">Сгенерировать</a>
             </p>
