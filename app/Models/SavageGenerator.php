@@ -5,8 +5,8 @@ namespace App\Models;
 class SavageGenerator
 {
 
-    protected $firstNames = ['Христофор', 'Илья'];
-    protected $lastNames = ['Работник', 'Программист'];
+    protected $firstNames = ['Христофор', 'Илья', 'Сеня', 'Жека'];
+    protected $lastNames = ['Работник', 'Программист', 'Тридемакс', 'Дотер'];
 
     protected function generateFirstName()
     {
