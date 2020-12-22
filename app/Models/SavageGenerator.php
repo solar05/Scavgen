@@ -30,8 +30,8 @@ class SavageGenerator
 
     public function generate()
     {
-        $firstName = $this->generateFirstName();
-        $lastName = $this->generateLastName();
+        $firstName = ucfirst($this->generateFirstName());
+        $lastName = ucfirst($this->generateLastName());
         $fullName = "{$firstName} {$lastName}";
         return ['firstName' => $firstName,
                 'lastName' => $lastName,

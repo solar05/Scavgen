@@ -15,8 +15,12 @@
         <div class="jumbotron">
             <h1 class="display-4 text-center">Генератор имен диких!</h1>
             <hr class="my-4">
-            <h2 class="lead text-center">{{ $names['fullName'] }}</h2>
+            <h2 class="text-center">{{ $names['fullName'] }}</h2>
             <br>
+            @if ($isBingo)
+            <h2 class="text-center text-success">БИНГО!</h2>
+            <br>
+            @endif
             <p class="lead">
                 <a class="btn btn-success btn-lg d-flex justify-content-center" href="/" role="button">Сгенерировать</a>
             </p>

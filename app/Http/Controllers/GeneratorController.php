@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use App\Models\SavageGenerator;
 
@@ -13,6 +12,7 @@ class GeneratorController extends BaseController
     {
         $generator = new SavageGenerator();
         $names = $generator->generate();
-        return view('welcome', ['names' => $names]);
+        $isBingo = $names['fullName'] === 'Олег Пошлый';
+        return view('welcome', ['names' => $names, 'isBingo' => $isBingo]);
     }
 }
