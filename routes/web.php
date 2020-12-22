@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GeneratorController;
+use App\Http\Controllers\ApiGeneratorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,3 +16,4 @@ use App\Http\Controllers\GeneratorController;
 */
 
 Route::get('/', [GeneratorController::class, 'generate']);
+Route::get('/api', [ApiGeneratorController::class, 'generate']);
