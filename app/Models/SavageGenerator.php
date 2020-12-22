@@ -8,9 +8,11 @@ class SavageGenerator
     protected $firstNames = ['Христофор', 'Илья', 'Сеня', 'Жека', 'Тоха',
                              'Олег', 'Константин', 'Андрей', 'Артём', 'Никита',
                              'Игорь', 'Витёк', 'Гога', 'Савелий'];
+
     protected $lastNames = ['Работник', 'Программист', 'Тридемакс', 'Дотер',
                             'Тиктокер', 'Ястреб', 'Ненаркоторговец', 'Очко',
-                            'Петух', 'Шиза', 'Пошлый', 'Заднеприводной', 'Заводской', 'Вертухай'];
+                            'Петух', 'Шиза', 'Пошлый', 'Заднеприводной', 'Заводской', 'Вертухай',
+                            'Анимешник'];
 
     protected function generateFirstName()
     {
@@ -34,5 +36,15 @@ class SavageGenerator
         return ['firstName' => $firstName,
                 'lastName' => $lastName,
                 'fullName' => $fullName];
+    }
+
+    public function listFirstNames()
+    {
+        return $this->firstNames;
+    }
+
+    public function listLastNames()
+    {
+        return $this->lastNames;
     }
 }
