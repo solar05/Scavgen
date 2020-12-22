@@ -37,7 +37,7 @@ class SavageGeneratorTest extends TestCase
     {
         $firstNames = $this->generator->listFirstNames();
         $lastNames = $this->generator->listLastNames();
-        $pregRegular = function($name) {
+        $pregRegular = function ($name) {
             return boolval(preg_match('/^[a-zа-яё]+$/iu', $name));
         };
         $filteredFirstNames = array_filter($firstNames, $pregRegular);
