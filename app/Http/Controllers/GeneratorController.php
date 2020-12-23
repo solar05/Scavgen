@@ -15,4 +15,11 @@ class GeneratorController extends BaseController
         $isBingo = $names['fullName'] === 'Олег Пошлый';
         return view('welcome', ['names' => $names, 'isBingo' => $isBingo]);
     }
+
+    public function generateTeam()
+    {
+        $generator = new SavageGenerator();
+        $names = $generator->generateTeam();
+        return view('teams', ['namesList' => $names]);
+    }
 }

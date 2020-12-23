@@ -4,7 +4,7 @@ namespace App\Models;
 
 class SavageGenerator
 {
-
+    const TEAM_SIZE = 5;
     protected $firstNames = ['Христофор', 'Илья', 'Сеня', 'Жека', 'Тоха',
                              'Олег', 'Константин', 'Андрей', 'Артём', 'Никита',
                              'Игорь', 'Витёк', 'Гога', 'Савелий', 'Вова', 'Ярик',
@@ -52,5 +52,20 @@ class SavageGenerator
     public function listLastNames()
     {
         return $this->lastNames;
+    }
+
+    public function generateTeam()
+    {
+        $alreadyGenerated = [];
+        $namesList = [];
+        while (count($namesList) != 5) {
+            $names = $this->generate();
+            $fullName = $names['fullName'];
+            if (!in_array($fullName, $alreadyGenerated)) {
+                $namesList[] = $names;
+                $alreadyGenerated[] = $fullName;
+            }
+        }
+        return $namesList;
     }
 }

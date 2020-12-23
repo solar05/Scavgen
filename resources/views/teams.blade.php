@@ -18,23 +18,27 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-item nav-link" href="/">Собрать дикого</a>
-                    <a class="nav-item nav-link" href="/team">Собрать отряд</a>
+                    <a class="nav-item nav-link" href="/">Собрать отряд</a>
                 </div>
             </div>
         </nav>
     </div>
     <div class="container border border-dark rounded">
         <div class="jumbotron">
-            <h1 class="display-4 text-center">Генератор имен диких!</h1>
+            <h1 class="display-4 text-center">Генератор отряда диких!</h1>
             <hr class="my-4">
-            <h2 class="text-center">{{ $names['fullName'] }}</h2>
+            <div class="border border-dark rounded">
+                @foreach ($namesList as $names)
+                    @if ($loop->last)
+                    <h2 class="text-center m-0">{{ $names['fullName'] }}</h2>
+                    @else
+                        <h2 class="text-center border-bottom border-dark">{{ $names['fullName'] }}</h2>
+                    @endif
+                @endforeach
+            </div>
             <br>
-            @if ($isBingo)
-            <h2 class="text-center text-success">БИНГО!</h2>
-            <br>
-            @endif
             <p class="lead">
-                <a class="btn btn-success btn-lg d-flex justify-content-center" href="/" role="button">Сгенерировать</a>
+                <a class="btn btn-success btn-lg d-flex justify-content-center" href="/team" role="button">Сгенерировать отряд диких</a>
             </p>
         </div>
     </div>

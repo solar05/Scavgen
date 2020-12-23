@@ -23,6 +23,14 @@ class SavageGeneratorTest extends TestCase
         assertTrue(key_exists("fullName", $names));
     }
 
+    public function testSavageTeamGeneration()
+    {
+        $names = $this->generator->generateTeam();
+        $teamSize = SavageGenerator::TEAM_SIZE;
+        assertTrue(is_array($names));
+        $this->assertEquals(count($names), $teamSize, "Incorrect team generation!");
+    }
+
     public function testUniqNames()
     {
         $firstNames = $this->generator->listFirstNames();
