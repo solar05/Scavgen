@@ -14,8 +14,8 @@
             
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="/">Собрать дикого</a>
-                    <a class="nav-item nav-link" href="/team">Собрать отряд</a>
+                    <a class="nav-item nav-link" href="{{ route('single') }}">Собрать дикого</a>
+                    <a class="nav-item nav-link" href="{{ route('team') }}">Собрать отряд</a>
                 </div>
             </div>
         </nav>
@@ -35,7 +35,7 @@
             </div>
             <br>
             <p class="lead">
-                <a class="btn btn-success btn-lg d-flex justify-content-center" href="/team" role="button">Сгенерировать отряд диких</a>
+                <a class="btn btn-success btn-lg d-flex justify-content-center" href="{{ route('team') }}" role="button">Сгенерировать отряд диких</a>
             </p>
         </div>
     </div>

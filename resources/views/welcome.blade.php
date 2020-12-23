@@ -15,8 +15,8 @@
             
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="/">Собрать дикого</a>
-                    <a class="nav-item nav-link" href="/team">Собрать отряд</a>
+                    <a class="nav-item nav-link" href="{{ route('single') }}">Собрать дикого</a>
+                    <a class="nav-item nav-link" href="{{ route('team') }}">Собрать отряд</a>
                 </div>
             </div>
         </nav>
@@ -32,7 +32,7 @@
             <br>
             @endif
             <p class="lead">
-                <a class="btn btn-success btn-lg d-flex justify-content-center" href="/" role="button">Сгенерировать</a>
+                <a class="btn btn-success btn-lg d-flex justify-content-center" href="{{ route('single') }}" role="button">Сгенерировать</a>
             </p>
         </div>
     </div>
