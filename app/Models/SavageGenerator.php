@@ -11,7 +11,8 @@ class SavageGenerator
                              'Всеволод', 'Митяй', 'Вениамин', 'Алексей', 'Яша',
                              'Данила', 'Лёва', 'Саша', 'Саня', 'Женя',
                              'Костян', 'Аристарх', 'Альвиан', 'Артур',
-                             'Спиридон', 'Пахомий'];
+                             'Спиридон', 'Пахомий', 'Мэн', 'Жора',
+                             'Павлик', 'Захар', 'Самуил', 'Армен', 'Петя'];
 
     protected $lastNames = ['Работник', 'Программист', 'Тридемакс', 'Дотер',
                             'Тиктокер', 'Ястреб', 'Ненаркоторговец', 'Очко',
@@ -20,7 +21,11 @@ class SavageGenerator
                             'Кальяньщик', 'Хирург', 'Дюбель', 'Всемогущий',
                             'Аристократ', 'Дихлофос', 'Коптёр', 'Чужой', 'Мальчик',
                             'Хук', 'Секретарь', 'Шницель', 'Овощебаза',
-                            'Монгол', 'Иуда', 'Ипотека', 'Бугор'];
+                            'Монгол', 'Иуда', 'Ипотека', 'Бугор',
+                            'Тамада', 'Пекуш', 'Ебанько',
+                            'Робин', 'Торч', 'РХБЗ', 'Робокоп', 'Репа'];
+    
+    protected $specialNames = ['РХБЗ'];
 
     protected function generateFirstName()
     {
@@ -34,7 +39,11 @@ class SavageGenerator
     {
         $length = count($this->lastNames);
         $number = random_int(0, $length - 1);
-        $preparedLastName = ucfirst(strtolower($this->lastNames[$number]));
+        $lastName = $this->lastNames[$number];
+        if (in_array($lastName, $this->specialNames)) {
+            $preparedLastName = $lastName;
+        }
+        $preparedLastName = ucfirst(strtolower($lastName));
         return $preparedLastName;
     }
 
