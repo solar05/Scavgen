@@ -29,7 +29,7 @@
                     @if ($loop->last)
                     <h2 class="text-center m-0">{{ $names['fullName'] }}</h2>
                     @else
-                        <h2 class="text-center border-bottom border-dark">{{ $names['fullName'] }}</h2>
+                        <h2 class="text-center m-0 border-bottom border-dark">{{ $names['fullName'] }}</h2>
                     @endif
                 @endforeach
             </div>
