@@ -26,7 +26,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         if (Request::server('HTTP_X_FORWARDED_PROTO') == 'https') {
-           URL::forceScheme('https');
+            URL::forceScheme('https');
         }
     }
 }
