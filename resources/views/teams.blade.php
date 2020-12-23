@@ -18,7 +18,7 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-item nav-link" href="/">Собрать дикого</a>
-                    <a class="nav-item nav-link" href="/">Собрать отряд</a>
+                    <a class="nav-item nav-link" href="/team">Собрать отряд</a>
                 </div>
             </div>
         </nav>
