@@ -6,7 +6,7 @@ test:
 	composer run-script phpunit tests
 run:
 	php artisan serve
-docker-run:
+compose:
 	docker-compose up
-docker-stop:
+stop:
 	docker-compose down
