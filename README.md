@@ -8,6 +8,8 @@
 ## Linters and tests
 - `make lint` for linter.
 - `make test` for tests execute.
+- `make compose-lint` for docker linter.
+- `make compose-test` for docker tests execute.
 
 ## About Project
 Scavenger names generator. (Escape From Tarkov videogame)
