@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use Illuminate\Routing\Controller as BaseController;
 use App\Models\SavageGenerator;
 
-class ApiGeneratorController extends BaseController
+class GeneratorController extends BaseController
 {
     public function generate()
     {

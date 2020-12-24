@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GeneratorController;
-use App\Http\Controllers\ApiGeneratorController;
+use App\Http\Controllers\Api\GeneratorController as ApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,5 +17,5 @@ use App\Http\Controllers\ApiGeneratorController;
 
 Route::get('/', [GeneratorController::class, 'generate'])->name('single');
 Route::get('/team', [GeneratorController::class, 'generateTeam'])->name('team');
-Route::get('/api', [ApiGeneratorController::class, 'generate']);
-Route::get('/api/team', [ApiGeneratorController::class, 'generateTeam']);
+Route::get('/api', [ApiController::class, 'generate']);
+Route::get('/api/team', [ApiController::class, 'generateTeam']);
