@@ -28,7 +28,7 @@ class SavageGeneratorTest extends TestCase
         $names = $this->generator->generateTeam();
         $teamSize = SavageGenerator::TEAM_SIZE;
         assertTrue(is_array($names));
-        $this->assertEquals(count($names), $teamSize, "Incorrect team generation!");
+        $this->assertEquals(count($names), $teamSize, "Incorrect team generation size!");
     }
 
     public function testUniqNames()
@@ -37,8 +37,9 @@ class SavageGeneratorTest extends TestCase
         $lastNames = $this->generator->listLastNames();
         $uniqFirstNames = array_unique($firstNames);
         $uniqLastNames = array_unique($lastNames);
-        $this->assertEquals(count($firstNames), count($uniqFirstNames), "First names have dublicates!");
-        $this->assertEquals(count($lastNames), count($uniqLastNames), "Last names have dublicates!");
+        //$this->assertEquals(count($firstNames), count($uniqFirstNames), "First names have dublicates!");
+        $this->assertEquals($firstNames, $uniqFirstNames, "First names have dublicates!");
+        $this->assertEquals($lastNames, $uniqLastNames, "Last names have dublicates!");
     }
 
     public function testNamesNaming()
@@ -50,7 +51,7 @@ class SavageGeneratorTest extends TestCase
         };
         $filteredFirstNames = array_filter($firstNames, $pregRegular);
         $filteredLastNames = array_filter($lastNames, $pregRegular);
-        $this->assertEquals(count($firstNames), count($filteredFirstNames), "There are some incorrect first names!");
-        $this->assertEquals(count($lastNames), count($filteredLastNames), "There are some incorrect last names!");
+        $this->assertEquals($firstNames, $filteredFirstNames, "There are some incorrect first names!");
+        $this->assertEquals($lastNames, $filteredLastNames, "There are some incorrect last names!");
     }
 }
