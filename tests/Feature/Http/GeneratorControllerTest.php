@@ -17,4 +17,11 @@ class GeneratorControllerTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+    public function testTeamTest()
+    {
+        $response = $this->get('/team');
+
+        $response->assertStatus(200);
+    }
 }
