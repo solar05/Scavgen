@@ -11,13 +11,13 @@ class GeneratorController extends BaseController
     {
         $generator = new SavageGenerator();
         $names = $generator->generate();
-        return json_encode($names, JSON_UNESCAPED_UNICODE);
+        return response()->json($names, 200, [], JSON_UNESCAPED_UNICODE);
     }
 
     public function generateTeam()
     {
         $generator = new SavageGenerator();
         $names = $generator->generateTeam();
-        return json_encode($names, JSON_UNESCAPED_UNICODE);
+        return response()->json($names, 200, [], JSON_UNESCAPED_UNICODE);
     }
 }

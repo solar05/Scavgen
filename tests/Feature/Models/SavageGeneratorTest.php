@@ -37,7 +37,6 @@ class SavageGeneratorTest extends TestCase
         $lastNames = $this->generator->listLastNames();
         $uniqFirstNames = array_unique($firstNames);
         $uniqLastNames = array_unique($lastNames);
-        //$this->assertEquals(count($firstNames), count($uniqFirstNames), "First names have dublicates!");
         $this->assertEquals($firstNames, $uniqFirstNames, "First names have dublicates!");
         $this->assertEquals($lastNames, $uniqLastNames, "Last names have dublicates!");
     }
