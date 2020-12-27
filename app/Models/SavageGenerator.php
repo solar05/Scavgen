@@ -4,7 +4,7 @@ namespace App\Models;
 
 class SavageGenerator
 {
-    const TEAM_SIZE = 5;
+    public const TEAM_SIZE = 5;
     protected $firstNames = ['Христофор', 'Илья', 'Сеня', 'Жека', 'Тоха',
                              'Олег', 'Константин', 'Андрей', 'Артём', 'Никита',
                              'Игорь', 'Витёк', 'Гога', 'Савелий', 'Вова', 'Ярик',
@@ -35,7 +35,7 @@ class SavageGenerator
                             'Шульц', 'Кацман', 'Япончик', 'Сотона', 'Корч', 'Примус',
                             'Кардан', 'Приличный', 'Сбалансированный', 'Приемлемый',
                             'Умный', 'Красивый', 'Урод', 'Мужчина'];
-    
+
     protected $specialNames = ['РХБЗ', 'РЖД'];
 
     protected function generateFirstName()

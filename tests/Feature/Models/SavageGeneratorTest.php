@@ -1,8 +1,10 @@
 <?php
 
 namespace Tests\Feature\Models;
+
 use Tests\TestCase;
 use App\Models\SavageGenerator;
+
 use function PHPUnit\Framework\assertTrue;
 
 class SavageGeneratorTest extends TestCase

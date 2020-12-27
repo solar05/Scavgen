@@ -7,7 +7,7 @@ use App\Models\SavageGenerator;
 
 class GeneratorController extends BaseController
 {
- 
+
     public function generate()
     {
         $generator = new SavageGenerator();
