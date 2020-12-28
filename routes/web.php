@@ -17,5 +17,5 @@ use App\Http\Controllers\Api\GeneratorController as ApiController;
 
 Route::get('/', [GeneratorController::class, 'generate'])->name('single');
 Route::get('/team', [GeneratorController::class, 'generateTeam'])->name('team');
-Route::get('/api', [ApiController::class, 'generate']);
+Route::get('/api/single', [ApiController::class, 'generate']);
 Route::get('/api/team', [ApiController::class, 'generateTeam']);

@@ -13,7 +13,7 @@ class GeneratorControllerTest extends TestCase
      */
     public function testBasicApiTest()
     {
-        $response = $this->get('/api');
+        $response = $this->get('/api/single');
 
         $response->assertStatus(200);
         $response->assertHeader("Content-Type", "application/json");
