@@ -10,6 +10,10 @@ use function PHPUnit\Framework\assertTrue;
 class SavageGeneratorTest extends TestCase
 {
     protected $generator;
+    protected $namesExample = [
+        'firstName' => 'Олег',
+        'lastName' => 'Пошлый',
+        'fullName' => 'Олег Пошлый'];
 
     public function setUp(): void
     {
@@ -54,5 +58,11 @@ class SavageGeneratorTest extends TestCase
         $filteredLastNames = array_filter($lastNames, $pregRegular);
         $this->assertEquals($firstNames, $filteredFirstNames, "There are some incorrect first names!");
         $this->assertEquals($lastNames, $filteredLastNames, "There are some incorrect last names!");
+    }
+
+    public function testBingoNames()
+    {
+        $bingo = $this->generator->isBingoName($this->namesExample);
+        $this->assertTrue($bingo);
     }
 }

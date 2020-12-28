@@ -37,6 +37,9 @@ class SavageGenerator
                             'Умный', 'Красивый', 'Урод', 'Мужчина'];
 
     protected $specialNames = ['РХБЗ', 'РЖД'];
+    protected $bingoNames = [
+        'Олег Пошлый', 'Илья Торч', 'Илья Кальянщик',
+        'Илья Заводской', 'Олег Анимешник', 'Андрей Выходной'];
 
     protected function generateFirstName()
     {
@@ -91,5 +94,10 @@ class SavageGenerator
             }
         }
         return $namesList;
+    }
+
+    public function isBingoName($names)
+    {
+        return in_array($names['fullName'], $this->bingoNames);
     }
 }
