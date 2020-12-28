@@ -11,6 +11,10 @@
 - `make compose-lint` for docker linter.
 - `make compose-test` for docker tests execute.
 
+## API
+- `get /api/single` for single scav generation.
+- `get /api/team` for scav team generation.
+
 ## About Project
 Scavenger names generator. (Escape From Tarkov videogame)
 
