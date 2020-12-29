@@ -1,0 +1,15 @@
+.blended {
+    font-family: "Blender";
+    src: local("fonts/bender.bold.otf") format("opentype");
+}
+
+.blended-reg-bg {
+    font-family: "Blender";
+    font-size: 250%;
+    src: local("fonts/bender.regular.otf") format("opentype");
+}
+
+.blended-reg {
+    font-family: "Blender";
+    src: local("fonts/bender.regular.otf") format("opentype");
+}

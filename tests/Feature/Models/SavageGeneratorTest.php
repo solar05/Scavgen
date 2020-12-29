@@ -60,9 +60,9 @@ class SavageGeneratorTest extends TestCase
         $this->assertEquals($lastNames, $filteredLastNames, "There are some incorrect last names!");
     }
 
-    public function testBingoNames()
+    public function testLegendaryNames()
     {
-        $bingo = $this->generator->isBingoName($this->namesExample);
-        $this->assertTrue($bingo);
+        $legendary = $this->generator->isLegendary($this->namesExample);
+        $this->assertTrue($legendary);
     }
 }

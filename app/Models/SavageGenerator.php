@@ -73,7 +73,7 @@ class SavageGenerator
         'Лютый', 'Майор', 'Припой', 'Электрод', 'Воркута', 'Гастролёр',
         'Дядя', 'Трудовик', 'Тренер', 'Пентиум', 'Флюс'];
     protected $specialNames = ['РХБЗ', 'РЖД', 'ДВС'];
-    protected $bingoNames = [
+    protected $legendaryNames = [
         'Олег Пошлый', 'Вова Вист', 'Илья Торч',
         'Илья Кальяньщик', 'Илья Заводской', 'Андрей Выходной', 'Илья Косипоша',
         'Артёмка Жмых', 'Костян Тыкволобик', 'Гит Пуш', 'Кабан Кабанчик',
@@ -135,8 +135,8 @@ class SavageGenerator
         return $namesList;
     }
 
-    public function isBingoName($names)
+    public function isLegendary($names)
     {
-        return in_array($names['fullName'], $this->bingoNames);
+        return in_array($names['fullName'], $this->legendaryNames);
     }
 }

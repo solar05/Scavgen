@@ -12,8 +12,8 @@ class GeneratorController extends BaseController
     {
         $generator = new SavageGenerator();
         $names = $generator->generate();
-        $isBingo = $generator->isBingoName($names);
-        return view('single', ['names' => $names, 'isBingo' => $isBingo]);
+        $isLegendary = $generator->isLegendary($names);
+        return view('single', ['names' => $names, 'isLegendary' => $isLegendary]);
     }
 
     public function generateTeam()
