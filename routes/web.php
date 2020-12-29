@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GeneratorController;
-use App\Http\Controllers\Api\GeneratorController as ApiController;
 use App\Http\Controllers\PageController;
 
 /*
@@ -18,6 +17,4 @@ use App\Http\Controllers\PageController;
 
 Route::get('/', [GeneratorController::class, 'generate'])->name('single');
 Route::get('/team', [GeneratorController::class, 'generateTeam'])->name('team');
-Route::get('/api/single', [ApiController::class, 'generate']);
-Route::get('/api/team', [ApiController::class, 'generateTeam']);
 Route::get('/robots.txt', [PageController::class, 'robots']);
