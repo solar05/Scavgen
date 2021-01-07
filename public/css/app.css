@@ -5,6 +5,13 @@
     font-weight: normal;
 }
 
+@font-face {
+    font-family: "BenderBold";
+    src: url("fonts/bender.bold.otf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+
 .blended {
     font-family: "BenderBold";
     src: url("fonts/bender.bold.otf") format("opentype");
