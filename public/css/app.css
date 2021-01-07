@@ -1,17 +1,30 @@
+@font-face {
+    font-family: "BenderRegular";
+    src: url("fonts/bender.regular.otf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+
 .blended {
-    font-family: "Blender";
-    src: local("fonts/bender.bold.otf") format("opentype");
+    font-family: "BenderBold";
+    src: url("fonts/bender.bold.otf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
 }
 
 .blended-reg-bg {
-    font-family: "Blender";
+    font-family: "BenderRegular";
     font-size: 250%;
-    src: local("fonts/bender.regular.otf") format("opentype");
+    src: url("./fonts/bender.regular.otf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
 }
 
 .blended-reg {
-    font-family: "Blender";
-    src: local("fonts/bender.regular.otf") format("opentype");
+    font-family: "BenderRegular";
+    src: url("./fonts/bender.regular.otf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
 }
 
 .legendary {
