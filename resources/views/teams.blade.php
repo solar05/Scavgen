@@ -44,7 +44,7 @@
                     @if ($loop->last)
                         @switch ($names['rarity'])
                             @case('legendary')
-                                <h2 class="text-center text-success m-0 blended-reg-bg">{{ $names['fullName'] }}</h2>
+                                <h2 class="text-center legendary m-0 blended-reg-bg">{{ $names['fullName'] }}</h2>
                             @break
                             @case('rare')
                             <h2 class="text-center text-primary m-0 blended-reg-bg">{{ $names['fullName'] }}</h2>
@@ -56,7 +56,7 @@
                     @else
                         @switch ($names['rarity'])
                             @case('legendary')
-                                <h2 class="text-center text-success m-0 border-bottom blended-reg-bg border-dark">{{ $names['fullName'] }}</h2>
+                                <h2 class="text-center legendary m-0 border-bottom blended-reg-bg border-dark">{{ $names['fullName'] }}</h2>
                             @break
                             @case('rare')
                             <h2 class="text-center text-primary m-0 border-bottom blended-reg-bg border-dark">{{ $names['fullName'] }}</h2>

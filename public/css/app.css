@@ -13,3 +13,7 @@
     font-family: "Blender";
     src: local("fonts/bender.regular.otf") format("opentype");
 }
+
+.legendary {
+    color: darkorange;
+}

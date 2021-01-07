@@ -42,13 +42,13 @@
             <br>
             @switch ($names['rarity'])
                 @case('legendary')
-                    <h2 class="text-center text-success .blended-reg-bg">Легендарная находка!</h2>
+                    <h2 class="text-center legendary blended-reg-bg">Легендарная находка!</h2>
                 @break
                 @case('rare')
-                    <h2 class="text-center text-primary .blended-reg-bg">Редкая находка!</h2>
+                    <h2 class="text-center text-primary blended-reg-bg">Редкая находка!</h2>
                 @break
                 @default
-                    <h2 class="text-center text-secondary .blended-reg-bg">Обычный дикий.</h2>
+                    <h2 class="text-center text-secondary blended-reg-bg">Обычный дикий.</h2>
                 @break
             @endswitch
             <br>
