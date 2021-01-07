@@ -40,10 +40,18 @@
             <hr class="my-4">
             <h2 class="text-center blended-reg-bg">{{ $names['fullName'] }}</h2>
             <br>
-            @if ($isLegendary)
-            <h2 class="text-center text-success .blended-reg-bg">Легендарная находка!</h2>
+            @switch ($names['rarity'])
+                @case('legendary')
+                    <h2 class="text-center text-success .blended-reg-bg">Легендарная находка!</h2>
+                @break
+                @case('rare')
+                    <h2 class="text-center text-primary .blended-reg-bg">Редкая находка!</h2>
+                @break
+                @default
+                    <h2 class="text-center text-secondary .blended-reg-bg">Обычный дикий.</h2>
+                @break
+            @endswitch
             <br>
-            @endif
             <p class="lead">
                 <a class="btn btn-success btn-lg d-flex justify-content-center blended-reg" href="{{ route('single') }}" role="button">Сгенерировать</a>
             </p>

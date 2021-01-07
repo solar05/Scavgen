@@ -105,9 +105,11 @@ class SavageGenerator
         $firstName = $this->generateFirstName();
         $lastName = $this->generateLastName();
         $fullName = "{$firstName} {$lastName}";
+        $rarity = $this->checkRarity($fullName);
         return ['firstName' => $firstName,
                 'lastName' => $lastName,
-                'fullName' => $fullName];
+                'fullName' => $fullName,
+                'rarity' => $rarity];
     }
 
     public function listFirstNames()
@@ -135,8 +137,25 @@ class SavageGenerator
         return $namesList;
     }
 
-    public function isLegendary($names)
+    protected function isLegendary($fullName)
     {
-        return in_array($names['fullName'], $this->legendaryNames);
+        return in_array($fullName, $this->legendaryNames);
+    }
+
+    protected function isRare($fullName)
+    {
+        [$firstName, $secondName] = explode(' ', $fullName);
+        return strlen($firstName) == strlen($secondName);
+    }
+
+    protected function checkRarity($fullName)
+    {
+        if ($this->isLegendary($fullName)) {
+            return "legendary";
+        } elseif ($this->isRare($fullName)) {
+            return "rare";
+        } else {
+            return "common";
+        }
     }
 }

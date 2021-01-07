@@ -10,10 +10,6 @@ use function PHPUnit\Framework\assertTrue;
 class SavageGeneratorTest extends TestCase
 {
     protected $generator;
-    protected $namesExample = [
-        'firstName' => 'Олег',
-        'lastName' => 'Пошлый',
-        'fullName' => 'Олег Пошлый'];
 
     public function setUp(): void
     {
@@ -27,6 +23,7 @@ class SavageGeneratorTest extends TestCase
         assertTrue(key_exists("firstName", $names));
         assertTrue(key_exists("lastName", $names));
         assertTrue(key_exists("fullName", $names));
+        assertTrue(key_exists("rarity", $names));
     }
 
     public function testSavageTeamGeneration()
@@ -58,11 +55,5 @@ class SavageGeneratorTest extends TestCase
         $filteredLastNames = array_filter($lastNames, $pregRegular);
         $this->assertEquals($firstNames, $filteredFirstNames, "There are some incorrect first names!");
         $this->assertEquals($lastNames, $filteredLastNames, "There are some incorrect last names!");
-    }
-
-    public function testLegendaryNames()
-    {
-        $legendary = $this->generator->isLegendary($this->namesExample);
-        $this->assertTrue($legendary);
     }
 }

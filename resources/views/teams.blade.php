@@ -42,9 +42,29 @@
             <div class="border border-dark rounded">
                 @foreach ($namesList as $names)
                     @if ($loop->last)
-                    <h2 class="text-center m-0 blended-reg-bg">{{ $names['fullName'] }}</h2>
+                        @switch ($names['rarity'])
+                            @case('legendary')
+                                <h2 class="text-center text-success m-0 blended-reg-bg">{{ $names['fullName'] }}</h2>
+                            @break
+                            @case('rare')
+                            <h2 class="text-center text-primary m-0 blended-reg-bg">{{ $names['fullName'] }}</h2>
+                            @break
+                            @default
+                            <h2 class="text-center text-secondary m-0 blended-reg-bg">{{ $names['fullName'] }}</h2>
+                            @break
+                        @endswitch
                     @else
-                        <h2 class="text-center m-0 border-bottom blended-reg-bg border-dark">{{ $names['fullName'] }}</h2>
+                        @switch ($names['rarity'])
+                            @case('legendary')
+                                <h2 class="text-center text-success m-0 border-bottom blended-reg-bg border-dark">{{ $names['fullName'] }}</h2>
+                            @break
+                            @case('rare')
+                            <h2 class="text-center text-primary m-0 border-bottom blended-reg-bg border-dark">{{ $names['fullName'] }}</h2>
+                            @break
+                            @default
+                            <h2 class="text-center text-secondary m-0 border-bottom blended-reg-bg border-dark">{{ $names['fullName'] }}</h2>
+                            @break
+                        @endswitch
                     @endif
                 @endforeach
             </div>
