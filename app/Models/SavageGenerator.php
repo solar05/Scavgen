@@ -181,7 +181,7 @@ class SavageGenerator
     {
         [$firstName, $secondName] = explode(' ', $fullName);
         return strlen($firstName) == strlen($secondName);
-    }    
+    }
 
     protected function checkRarity($fullName)
     {
