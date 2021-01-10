@@ -160,6 +160,14 @@ class SavageGenerator
     {
         return in_array($fullName, $this->legendaryNames);
     }
+    
+    protected function isEpic($fullName)
+    {
+        [$firstName, $secondName] = explode(' ', $fullName);
+        $firstTerm = mb_strtolower(mb_substr($firstName, -2));
+        $secondTerm = mb_strtolower(mb_substr($secondName, -2));
+        return $firstTerm == $secondTerm;
+    }
 
     protected function isRare($fullName)
     {
@@ -171,6 +179,8 @@ class SavageGenerator
     {
         if ($this->isLegendary($fullName)) {
             return "legendary";
+        } elseif ($this->isEpic($fullName)) {
+            return "epic";
         } elseif ($this->isRare($fullName)) {
             return "rare";
         } else {

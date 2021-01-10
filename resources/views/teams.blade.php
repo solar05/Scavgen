@@ -46,6 +46,9 @@
                             @case('legendary')
                                 <h2 class="text-center legendary m-0 blended-reg-bg">{{ $names['fullName'] }}</h2>
                             @break
+                            @case('epic')
+                                <h2 class="text-center epic m-0 blended-reg-bg">{{ $names['fullName'] }}</h2>
+                            @break
                             @case('rare')
                             <h2 class="text-center text-primary m-0 blended-reg-bg">{{ $names['fullName'] }}</h2>
                             @break
@@ -57,6 +60,9 @@
                         @switch ($names['rarity'])
                             @case('legendary')
                                 <h2 class="text-center legendary m-0 border-bottom blended-reg-bg border-dark">{{ $names['fullName'] }}</h2>
+                            @break
+                            @case('epic')
+                                <h2 class="text-center epic m-0 border-bottom blended-reg-bg border-dark">{{ $names['fullName'] }}</h2>
                             @break
                             @case('rare')
                             <h2 class="text-center text-primary m-0 border-bottom blended-reg-bg border-dark">{{ $names['fullName'] }}</h2>

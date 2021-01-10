@@ -44,6 +44,9 @@
                 @case('legendary')
                     <h2 class="text-center legendary blended-reg-bg">Легендарная находка!</h2>
                 @break
+                @case('epic')
+                    <h2 class="text-center epic blended-reg-bg">Эпическая находка!</h2>
+                @break
                 @case('rare')
                     <h2 class="text-center text-primary blended-reg-bg">Редкая находка!</h2>
                 @break
