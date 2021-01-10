@@ -53,7 +53,7 @@
                             <h2 class="text-center text-primary m-0 blended-reg-bg">{{ $names['fullName'] }}</h2>
                             @break
                             @case('uncommon')
-                            <h2 class="text-center uncommon text-primary m-0 blended-reg-bg">{{ $names['fullName'] }}</h2>
+                            <h2 class="text-center uncommon m-0 blended-reg-bg">{{ $names['fullName'] }}</h2>
                             @break
                             @default
                             <h2 class="text-center text-secondary m-0 blended-reg-bg">{{ $names['fullName'] }}</h2>
