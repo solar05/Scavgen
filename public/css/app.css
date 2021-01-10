@@ -41,3 +41,18 @@
 .epic {
     color: darkorchid;
 }
+
+.border-rare {
+    border: 6px solid dodgerblue;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.border-epic {
+    border: 6px solid darkorchid;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.border-legendary {
+    border: 6px solid darkorange;
+    border-radius: 20px 20px 20px 20px;
+}

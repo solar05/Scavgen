@@ -38,16 +38,20 @@
         <div class="jumbotron">
             <h1 class="display-4 text-center blended">Генератор имен диких!</h1>
             <hr class="my-4">
-            <h2 class="text-center blended-reg-bg">{{ $names['fullName'] }}</h2>
-            <br>
             @switch ($names['rarity'])
                 @case('legendary')
-                    <h2 class="text-center legendary blended-reg-bg">Легендарная находка!</h2>
+                <h2 class="text-center border-legendary blended-reg-bg">{{ $names['fullName'] }}</h2>
+                <br>
+                <h2 class="text-center legendary blended-reg-bg">Легендарная находка!</h2>
                 @break
                 @case('epic')
+                    <h2 class="text-center border-epic blended-reg-bg">{{ $names['fullName'] }}</h2>
+                    <br>
                     <h2 class="text-center epic blended-reg-bg">Эпическая находка!</h2>
                 @break
                 @case('rare')
+                    <h2 class="text-center border-rare blended-reg-bg">{{ $names['fullName'] }}</h2>
+                    <br>
                     <h2 class="text-center text-primary blended-reg-bg">Редкая находка!</h2>
                 @break
                 @default
