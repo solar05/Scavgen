@@ -42,6 +42,15 @@
     color: darkorchid;
 }
 
+.uncommon {
+    color: darkgreen;
+}
+
+.border-uncommon {
+    border: 6px solid darkgreen;
+    border-radius: 20px 20px 20px 20px;
+}
+
 .border-rare {
     border: 6px solid dodgerblue;
     border-radius: 20px 20px 20px 20px;

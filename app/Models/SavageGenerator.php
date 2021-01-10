@@ -164,16 +164,24 @@ class SavageGenerator
     protected function isEpic($fullName)
     {
         [$firstName, $secondName] = explode(' ', $fullName);
-        $firstTerm = mb_strtolower(mb_substr($firstName, -2));
-        $secondTerm = mb_strtolower(mb_substr($secondName, -2));
+        $firstTerm = mb_strtolower(mb_substr($firstName, -3));
+        $secondTerm = mb_strtolower(mb_substr($secondName, -3));
         return $firstTerm == $secondTerm;
     }
 
     protected function isRare($fullName)
     {
         [$firstName, $secondName] = explode(' ', $fullName);
-        return strlen($firstName) == strlen($secondName);
+        $firstTerm = mb_strtolower(mb_substr($firstName, 0, 1));
+        $secondTerm = mb_strtolower(mb_substr($secondName, 0, 1));
+        return $firstTerm == $secondTerm;
     }
+
+    protected function isUncommon($fullName)
+    {
+        [$firstName, $secondName] = explode(' ', $fullName);
+        return strlen($firstName) == strlen($secondName);
+    }    
 
     protected function checkRarity($fullName)
     {
@@ -183,6 +191,8 @@ class SavageGenerator
             return "epic";
         } elseif ($this->isRare($fullName)) {
             return "rare";
+        } elseif ($this->isUncommon($fullName)) {
+            return "uncommon";
         } else {
             return "common";
         }

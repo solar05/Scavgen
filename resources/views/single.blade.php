@@ -54,6 +54,11 @@
                     <br>
                     <h2 class="text-center text-primary blended-reg-bg">Редкая находка!</h2>
                 @break
+                @case('uncommon')
+                    <h2 class="text-center border-uncommon blended-reg-bg">{{ $names['fullName'] }}</h2>
+                    <br>
+                    <h2 class="text-center uncommon blended-reg-bg">Необычная находка!</h2>
+                @break
                 @default
                     <h2 class="text-center blended-reg-bg">{{ $names['fullName'] }}</h2>
                     <br>
