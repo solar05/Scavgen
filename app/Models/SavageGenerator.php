@@ -160,7 +160,7 @@ class SavageGenerator
     {
         return in_array($fullName, $this->legendaryNames);
     }
-    
+
     protected function isEpic($fullName)
     {
         [$firstName, $secondName] = explode(' ', $fullName);
