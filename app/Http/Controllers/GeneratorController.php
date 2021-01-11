@@ -25,4 +25,10 @@ class GeneratorController extends BaseController
         Statistic::updateMultipleRarity($rarityCount);
         return view('teams', ['namesList' => $names]);
     }
+
+    public function statistics()
+    {
+        $stats = Statistic::all()->first();
+        return view('stats', ['stats' => $stats]);
+    }
 }

@@ -24,4 +24,11 @@ class GeneratorControllerTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+    public function testStatsTest()
+    {
+        $response = $this->get('/stats');
+
+        $response->assertStatus(200);
+    }
 }
