@@ -15,6 +15,7 @@ class CreateStatisticsTable extends Migration
     {
         Schema::create('statistics', function (Blueprint $table) {
             $table->id();
+            $table->timestamps();
             $table->bigInteger('legendary')->default(0);
             $table->bigInteger('epic')->default(0);
             $table->bigInteger('rare')->default(0);

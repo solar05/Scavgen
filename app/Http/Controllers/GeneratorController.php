@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Routing\Controller as BaseController;
 use App\Models\SavageGenerator;
+use App\Models\Statistic;
 
 class GeneratorController extends BaseController
 {
@@ -12,6 +13,7 @@ class GeneratorController extends BaseController
     {
         $generator = new SavageGenerator();
         $names = $generator->generate();
+        Statistic::updateRarity($names['rarity']);
         return view('single', ['names' => $names]);
     }
 
@@ -19,6 +21,8 @@ class GeneratorController extends BaseController
     {
         $generator = new SavageGenerator();
         $names = $generator->generateTeam();
+        $rarityCount = Statistic::collectScavRarity($names);
+        Statistic::updateMultipleRarity($rarityCount);
         return view('teams', ['namesList' => $names]);
     }
 }

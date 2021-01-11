@@ -2,9 +2,7 @@
 
 namespace Database\Seeders;
 
-use Brick\Math\BigInteger;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
 class StatisticSeeder extends Seeder
 {
@@ -15,12 +13,7 @@ class StatisticSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('statistics')->insert([
-            'legendary' => 0,
-            'epic' => 0,
-            'rare' => 0,
-            'uncommon' => 0,
-            'common' => 0
-        ]);
+        $record = new \App\Models\Statistic();
+        $record->save();
     }
 }
