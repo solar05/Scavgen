@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Statistic extends Model
 {
     use HasFactory;
+
     protected $table = 'statistics';
     protected $attributes = [
         'legendary' => 0,
@@ -17,14 +18,14 @@ class Statistic extends Model
         'common' => 0
     ];
 
-    static public function updateRarity($rarity)
+    public static function updateRarity($rarity)
     {
-       $stats = Statistic::all()->first();
-       $stats->$rarity += 1;
-       $stats->save();
+        $stats = Statistic::all()->first();
+        $stats->$rarity += 1;
+        $stats->save();
     }
 
-    static public function updateMultipleRarity($rarityCounts)
+    public static function updateMultipleRarity($rarityCounts)
     {
         $stats = Statistic::all()->first();
         foreach ($rarityCounts as $rarity => $count) {
@@ -33,7 +34,7 @@ class Statistic extends Model
         $stats->save();
     }
 
-    static public function collectScavRarity($scavengers)
+    public static function collectScavRarity($scavengers)
     {
         $result = [];
         foreach ($scavengers as $scavenger) {
@@ -41,7 +42,7 @@ class Statistic extends Model
             if (array_key_exists($rarity, $result)) {
                 $result[$rarity] += 1;
             } else {
-                $result[$rarity]= 1;
+                $result[$rarity] = 1;
             }
         }
         return $result;
