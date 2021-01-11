@@ -30,11 +30,11 @@ jobs:
         touch database/database.sqlite
     - name: Run linters
       run: make lint
-    - name: Migrate db
-      run: make migrate
     - name: Execute tests (Unit and Feature tests) via PHPUnit
       env:
         DB_CONNECTION: sqlite
         DB_DATABASE: database/database.sqlite
-      run: make test
+      run: |
+        make migrate
+        make test
       
