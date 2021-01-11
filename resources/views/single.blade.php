@@ -29,6 +29,7 @@
             
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
+                    <a class="nav-item nav-link blended-reg bg-secondary text-white rounded" href="{{ route('single') }}">Собрать дикого</a>
                     <a class="nav-item nav-link blended-reg" href="{{ route('team') }}">Собрать отряд</a>
                     <a class="nav-item nav-link blended-reg" href="{{ route('stats') }}">Статистика</a>
                 </div>
