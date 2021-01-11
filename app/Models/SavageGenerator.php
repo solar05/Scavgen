@@ -170,8 +170,12 @@ class SavageGenerator
         $secondSub = mb_substr($secondName, -(intval(intval($secondLength / 2) / 2) + 1));
         $firstSubLength = intval(strlen($firstSub) / 2);
         $secondSubLength = intval(strlen($secondSub) / 2);
+        $firstTerm = mb_strtolower(mb_substr($firstName, -3));
+        $secondTerm = mb_strtolower(mb_substr($secondName, -3));
         if ($firstSubLength < 3 || $secondSubLength < 3 || abs($firstSubLength - $secondSubLength) > 3) {
             return false;
+        } elseif ($firstTerm == $secondTerm) {
+            return true;
         }
         $firstTerm = $firstSub;
         $secondTerm = $secondSub;
