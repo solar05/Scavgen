@@ -13,21 +13,21 @@ class GeneratorControllerTest extends TestCase
      */
     public function testBasicTest()
     {
-        $response = $this->get('/');
+        $response = $this->get(route('single'));
 
         $response->assertStatus(200);
     }
 
     public function testTeamTest()
     {
-        $response = $this->get('/team');
+        $response = $this->get(route('team'));
 
         $response->assertStatus(200);
     }
 
     public function testStatsTest()
     {
-        $response = $this->get('/stats');
+        $response = $this->get(route('stats'));
 
         $response->assertStatus(200);
     }

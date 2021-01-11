@@ -19,5 +19,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/single', [GeneratorController::class, 'generate']);
-Route::get('/team', [GeneratorController::class, 'generateTeam']);
+Route::get('/single', [GeneratorController::class, 'generate'])->name('api.single');
+Route::get('/team', [GeneratorController::class, 'generateTeam'])->name('api.team');
+Route::get('/stats', [GeneratorController::class, 'statistics'])->name('api.stats');
