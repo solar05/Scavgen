@@ -14,3 +14,8 @@ compose-lint:
 	docker-compose exec myapp composer run-script phpcs -- --standard=PSR12 tests app routes
 compose-test:
 	docker-compose exec myapp composer run-script phpunit tests
+migrate:
+	php artisan migrate
+seed:
+	php artisan db:seed
+
