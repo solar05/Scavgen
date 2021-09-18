@@ -141,11 +141,11 @@ class SavageGenerator
         return $this->lastNames;
     }
 
-    public function generateTeam()
+    public function generateTeam($teamSize = SavageGenerator::TEAM_SIZE)
     {
         $alreadyGenerated = [];
         $namesList = [];
-        while (count($namesList) != 5) {
+        while (count($namesList) != $teamSize) {
             $names = $this->generate();
             $fullName = $names['fullName'];
             if (!in_array($fullName, $alreadyGenerated)) {

@@ -18,6 +18,13 @@ class GeneratorControllerTest extends TestCase
         $response->assertHeader("Content-Type", "application/json");
     }
 
+    public function testApiHealthTest()
+    {
+        $response = $this->get(route('api.health'));
+        $response->assertStatus(200);
+        $response->assertHeader("Content-Type", "application/json");
+    }
+
     public function testTeamApiTest()
     {
         $response = $this->get(route('api.team'));

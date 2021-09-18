@@ -8,6 +8,11 @@ use App\Models\Statistic;
 
 class GeneratorController extends BaseController
 {
+    public function health()
+    {
+        return response()->json(["Ready for action!"], 200, [], JSON_UNESCAPED_UNICODE);
+    }
+
     public function generate()
     {
         $generator = new SavageGenerator();
