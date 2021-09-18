@@ -17,9 +17,8 @@ class GeneratorController extends BaseController
     {
         $generator = new SavageGenerator();
         $names = $generator->generate();
-        $names = $generator->generate();
         Statistic::updateRarity($names['rarity']);
-        return response()->json($names, 200, [], JSON_UNESCAPED_UNICODE);
+        return response()->json(["scavenger" => $names], 200, [], JSON_UNESCAPED_UNICODE);
     }
 
     public function generateTeam()
@@ -28,18 +27,19 @@ class GeneratorController extends BaseController
         $names = $generator->generateTeam();
         $rarityCount = Statistic::collectScavRarity($names);
         Statistic::updateMultipleRarity($rarityCount);
-        return response()->json($names, 200, [], JSON_UNESCAPED_UNICODE);
+        return response()->json(["scavengers" => $names], 200, [], JSON_UNESCAPED_UNICODE);
     }
 
     public function statistics()
     {
         $stat = Statistic::all()->first();
         return response()->json([
+            "statistics" => [
             'legendary' => $stat->legendary,
             'epic' => $stat->epic,
             'rare' => $stat->rare,
             'uncommon' => $stat->uncommon,
             'common' => $stat->common,
-        ], 200, [], JSON_UNESCAPED_UNICODE);
+            ]], 200, [], JSON_UNESCAPED_UNICODE);
     }
 }
