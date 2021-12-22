@@ -8,7 +8,6 @@ use App\Models\Statistic;
 
 class GeneratorController extends BaseController
 {
-
     public function generate()
     {
         $generator = new SavageGenerator();
