@@ -203,16 +203,16 @@ class SavageGenerator
 
     protected function checkRarity($fullName)
     {
+        $rarity = "common";
         if ($this->isLegendary($fullName)) {
-            return "legendary";
+             $rarity = "legendary";
         } elseif ($this->isEpic($fullName)) {
-            return "epic";
+            $rarity = "epic";
         } elseif ($this->isRare($fullName)) {
-            return "rare";
+            $rarity = "rare";
         } elseif ($this->isUncommon($fullName)) {
-            return "uncommon";
-        } else {
-            return "common";
+            $rarity = "uncommon";
         }
+        return $rarity;
     }
 }
