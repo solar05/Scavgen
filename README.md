@@ -1,4 +1,5 @@
 ![CI](https://github.com/solar05/Scavgen/workflows/CI/badge.svg)
+[![Maintainability](https://api.codeclimate.com/v1/badges/b4dfb987e53526f51301/maintainability)](https://codeclimate.com/github/solar05/Scavgen/maintainability)
 ## Install project
 - `make install` for install dependencies (required php and other default libraries).
 - `make run` for manual run.
