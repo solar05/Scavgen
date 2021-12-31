@@ -22,16 +22,14 @@
     <noscript><div><img src="https://mc.yandex.ru/watch/70878700" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     @endif
     </head>
-    <body class="bg-light">
+    <body class="scav-back">
     <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand h1 blended" href="#">Scavgen</a>
-            
+        <nav class="navbar navbar-expand-lg">
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link blended-reg" href="{{ route('single') }}">Собрать дикого</a>
-                    <a class="nav-item nav-link blended-reg" href="{{ route('team') }}">Собрать отряд</a>
-                    <a class="nav-item nav-link blended-reg bg-secondary text-white rounded" href="{{ route('stats') }}">Статистика</a>
+                    <a class="nav-item nav-link text-white" href="{{ route('single') }}">Собрать дикого</a>
+                    <a class="nav-item nav-link text-white" href="{{ route('team') }}">Собрать отряд</a>
+                    <a class="nav-item nav-link blended-nav rounded" href="{{ route('stats') }}">Статистика</a>
                 </div>
             </div>
         </nav>
@@ -49,7 +47,7 @@
             </div>
             <br>
             <p class="lead">
-                <a class="btn btn-success btn-lg d-flex justify-content-center blended-reg" href="{{ route('stats') }}" role="button">Обновить информацию</a>
+                <a class="btn btn-blended btn-lg d-flex justify-content-center blended" href="{{ route('stats') }}" role="button">Обновить информацию</a>
             </p>
         </div>
     </div>

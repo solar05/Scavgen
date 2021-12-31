@@ -12,12 +12,24 @@
     font-weight: normal;
 }
 
+.scav-back {
+    background-image: url("../images/back.jpg");
+}
+
+.blended-border {
+    border-color: #a5a5a5;
+}
+
+.btn-blended {
+    background-color: #d49300 !important;
+}
+
 .blended {
     font-family: "BenderBold";
     src: url("fonts/bender.bold.otf") format("opentype");
     font-style: normal;
     font-weight: normal;
-    color: #997600;
+    color: #a5a5a5;
 }
 
 .blended-reg-bg {
@@ -26,7 +38,12 @@
     src: url("./fonts/bender.regular.otf") format("opentype");
     font-style: normal;
     font-weight: normal;
-    color: #997600;
+    color: #a5a5a5;
+}
+
+.blended-nav {
+    color: #212529 !important;
+    background-color: #d49300 !important;    
 }
 
 .blended-reg {
@@ -34,7 +51,7 @@
     src: url("./fonts/bender.regular.otf") format("opentype");
     font-style: normal;
     font-weight: normal;
-    color: #997600;
+    color: #a5a5a5;
 }
 
 .legendary {

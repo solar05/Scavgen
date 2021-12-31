@@ -116,9 +116,11 @@ class SavageGenerator
         $length = count($this->lastNames);
         $number = random_int(0, $length - 1);
         $lastName = $this->lastNames[$number];
+
         if (in_array($lastName, $this->specialNames)) {
             $preparedLastName = $lastName;
         }
+        
         $preparedLastName = ucfirst(strtolower($lastName));
         return $preparedLastName;
     }
@@ -129,6 +131,7 @@ class SavageGenerator
         $lastName = $this->generateLastName();
         $fullName = "{$firstName} {$lastName}";
         $rarity = $this->checkRarity($fullName);
+
         return ['firstName' => $firstName,
                 'lastName' => $lastName,
                 'fullName' => $fullName,
@@ -149,6 +152,7 @@ class SavageGenerator
     {
         $alreadyGenerated = [];
         $namesList = [];
+
         while (count($namesList) != $teamSize) {
             $names = $this->generate();
             $fullName = $names['fullName'];
@@ -168,19 +172,25 @@ class SavageGenerator
     protected function isEpic($fullName)
     {
         [$firstName, $secondName] = explode(' ', $fullName);
+
         $firstLength = strlen($firstName);
         $secondLength = strlen($secondName);
+
         $firstSub = mb_substr($firstName, -(intval(intval($firstLength / 2) / 2) + 1));
         $secondSub = mb_substr($secondName, -(intval(intval($secondLength / 2) / 2) + 1));
+
         $firstSubLength = intval(strlen($firstSub) / 2);
         $secondSubLength = intval(strlen($secondSub) / 2);
+
         $firstTerm = mb_strtolower(mb_substr($firstName, -3));
         $secondTerm = mb_strtolower(mb_substr($secondName, -3));
+        
         if ($firstSubLength < 3 || $secondSubLength < 3 || abs($firstSubLength - $secondSubLength) > 3) {
             return false;
         } elseif ($firstTerm == $secondTerm) {
             return true;
         }
+
         $firstTerm = $firstSub;
         $secondTerm = $secondSub;
         $entry = strstr($secondTerm, $firstTerm);
