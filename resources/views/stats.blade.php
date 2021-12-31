@@ -23,6 +23,10 @@
     @endif
     </head>
     <body class="scav-back">
+    <script src="https://unpkg.com/magic-snowflakes/dist/snowflakes.min.js"></script>
+    <script>
+        new Snowflakes();
+    </script>
     <div class="container">
         <nav class="navbar navbar-expand-lg">
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
