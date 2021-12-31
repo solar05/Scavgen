@@ -120,7 +120,6 @@ class SavageGenerator
         if (in_array($lastName, $this->specialNames)) {
             $preparedLastName = $lastName;
         }
-        
         $preparedLastName = ucfirst(strtolower($lastName));
         return $preparedLastName;
     }
@@ -184,7 +183,6 @@ class SavageGenerator
 
         $firstTerm = mb_strtolower(mb_substr($firstName, -3));
         $secondTerm = mb_strtolower(mb_substr($secondName, -3));
-        
         if ($firstSubLength < 3 || $secondSubLength < 3 || abs($firstSubLength - $secondSubLength) > 3) {
             return false;
         } elseif ($firstTerm == $secondTerm) {
