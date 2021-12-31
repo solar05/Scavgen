@@ -41,7 +41,6 @@
     <div class="container border border-dark rounded">
         <div class="jumbotron">
             <h1 class="display-4 text-center blended">Статистика.</h1>
-            <hr class="my-4">
             <div class="border border-dark rounded">
                 <h2 class="text-center legendary m-0 border-bottom blended-reg-bg border-dark">Легендарных: {{ $stats->legendary }}</h2>
                 <h2 class="text-center epic m-0 border-bottom blended-reg-bg border-dark">Эпических: {{ $stats->epic }}</h2>

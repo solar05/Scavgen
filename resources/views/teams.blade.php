@@ -42,7 +42,6 @@
     <div class="container border border-dark rounded">
         <div class="jumbotron">
             <h1 class="display-4 text-center blended">Генератор отряда диких!</h1>
-            <hr class="my-4">
             <div class="border border-dark rounded">
                 @foreach ($namesList as $names)
                     @if ($loop->last)
