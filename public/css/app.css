@@ -17,6 +17,7 @@
     src: url("fonts/bender.bold.otf") format("opentype");
     font-style: normal;
     font-weight: normal;
+    color: #997600;
 }
 
 .blended-reg-bg {
@@ -25,6 +26,7 @@
     src: url("./fonts/bender.regular.otf") format("opentype");
     font-style: normal;
     font-weight: normal;
+    color: #997600;
 }
 
 .blended-reg {
@@ -32,6 +34,7 @@
     src: url("./fonts/bender.regular.otf") format("opentype");
     font-style: normal;
     font-weight: normal;
+    color: #997600;
 }
 
 .legendary {
