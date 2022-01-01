@@ -210,7 +210,7 @@ class SavageGenerator
         return strlen($firstName) == strlen($secondName);
     }
 
-    protected function checkRarity($fullName)
+    public function checkRarity($fullName)
     {
         $rarity = "common";
         if ($this->isLegendary($fullName)) {

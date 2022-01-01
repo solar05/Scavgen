@@ -56,4 +56,28 @@ class SavageGeneratorTest extends TestCase
         $this->assertEquals($firstNames, $filteredFirstNames, "There are some incorrect first names!");
         $this->assertEquals($lastNames, $filteredLastNames, "There are some incorrect last names!");
     }
+
+    public function testEpicRarity()
+    {
+        $name = "Яшка Полторашка";
+        $this->assertEquals($this->generator->checkRarity($name), "epic");
+    }
+
+    public function testLegendaryRarity()
+    {
+        $name = "Гит Пуш";
+        $this->assertEquals($this->generator->checkRarity($name), "legendary");
+    }
+
+    public function testRareRarity()
+    {
+        $name = "Гагик Глазастый";
+        $this->assertEquals($this->generator->checkRarity($name), "rare");
+    }
+
+    public function testUncommonRarity()
+    {
+        $name = "Назар Бобик";
+        $this->assertEquals($this->generator->checkRarity($name), "uncommon");
+    }
 }
