@@ -60,7 +60,7 @@
             "@php artisan key:generate --ansi"
         ],
         "phpcs": "phpcs",
-        "phpunit": "phpunit",
+        "phpunit": "phpunit --coverage-clover coverage.xml",
         "test": "phpunit tests"
     }
 }
