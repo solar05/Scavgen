@@ -93,7 +93,6 @@ class SavageGenerator
         'Жилистый', 'Фантазер', 'Баскервилей', 'Кухонный', 'Жирик', 'Пожилой',
         'Комнатный', 'Юбилейный', 'Коммит', 'Годовасик', 'Нехорошилов', 'Мороз',
         'Душный'];
-    protected $specialNames = ['РХБЗ', 'РЖД', 'ДВС'];
     protected $legendaryNames = [
         'Олег Пошлый', 'Вова Вист', 'Илья Торч',
         'Илья Кальяньщик', 'Илья Заводской', 'Андрей Выходной', 'Илья Косипоша',
@@ -117,12 +116,7 @@ class SavageGenerator
         $length = count($this->lastNames);
         $number = random_int(0, $length - 1);
         $lastName = $this->lastNames[$number];
-
-        if (in_array($lastName, $this->specialNames)) {
-            $preparedLastName = $lastName;
-        }
-        $preparedLastName = ucfirst(strtolower($lastName));
-        return $preparedLastName;
+        return $lastName;
     }
 
     public function generate()
