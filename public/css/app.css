@@ -14,6 +14,7 @@
 
 .scav-back {
     background-image: url("../images/back.jpg");
+    background-repeat: no-repeat;
 }
 
 .blended-border {
