@@ -44,8 +44,20 @@
 }
 
 .blended-nav {
+    font-family: "BenderBold";
+    src: url("fonts/bender.bold.otf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
     color: #212529 !important;
     background-color: #d49300 !important;    
+}
+
+.blend-font {
+    font-family: "BenderBold";
+    src: url("fonts/bender.bold.otf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
+    color: #fff !important;
 }
 
 .blended-reg {

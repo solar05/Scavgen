@@ -33,8 +33,8 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-item nav-link blended-nav rounded" href="{{ route('single') }}">Собрать дикого</a>
-                    <a class="nav-item nav-link text-white" href="{{ route('team') }}">Собрать отряд</a>
-                    <a class="nav-item nav-link text-white" href="{{ route('stats') }}">Статистика</a>
+                    <a class="nav-item nav-link blend-font" href="{{ route('team') }}">Собрать отряд</a>
+                    <a class="nav-item nav-link blend-font" href="{{ route('stats') }}">Статистика</a>
                 </div>
             </div>
         </nav>
