@@ -28,8 +28,7 @@
         new Snowflakes();
     </script>
     <div class="container">
-        <nav class="navbar navbar-expand-lg">
-
+        <nav class="navbar navbar-expand">
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-item nav-link blend-font" href="{{ route('single') }}">Собрать дикого</a>
