@@ -26,6 +26,14 @@
     background-color: #d49300 !important;
 }
 
+.btn-blended:hover {
+    background-color: rgb(195, 195, 195);
+}
+
+.blended-nav:hover {
+    background-color: rgb(195, 195, 195);
+}
+
 .blended {
     font-family: "BenderBold";
     src: url("fonts/bender.bold.otf") format("opentype");
