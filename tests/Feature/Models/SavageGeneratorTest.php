@@ -40,8 +40,8 @@ class SavageGeneratorTest extends TestCase
         $lastNames = $this->generator->listLastNames();
         $uniqFirstNames = array_unique($firstNames);
         $uniqLastNames = array_unique($lastNames);
-        $this->assertEquals($firstNames, $uniqFirstNames, "First names have duplicates!");
-        $this->assertEquals($lastNames, $uniqLastNames, "Last names have duplicates!");
+        $this->assertEquals($firstNames, $uniqFirstNames, "First names have duplicates! Remove names with `-` sign!");
+        $this->assertEquals($lastNames, $uniqLastNames, "Last names have duplicates! Remove names with `-` sign!");
     }
 
     public function testNamesNaming()
