@@ -146,7 +146,7 @@ class SavageGenerator
         'Кексик', 'Овсянка', 'Ноздря', 'Морзе', 'Хорошилов',
         'Абапер', 'Сатанист', 'Культист', 'Снюс', 'Копатыч',
         'Табуретка', 'Шишка', 'Портянка', 'Подошва', 'Носок',
-        'Аквалангист', 'Биба', 'Боба', 'Поридж', 'База'
+        'Аквалангист', 'Биба', 'Боба', 'Поридж', 'База', 'Импортозамещенный'
     ];
     protected $legendaryNames = [
         'Олег Пошлый', 'Вова Вист', 'Илья Торч', 'Джек Воробей', 'Бока Жока',
@@ -180,6 +180,12 @@ class SavageGenerator
     {
         $firstName = $this->generateFirstName();
         $lastName = $this->generateLastName();
+
+        while ($firstName == $lastName) {
+            $firstName = $this->generateFirstName();
+            $lastName = $this->generateLastName();
+        }
+
         $fullName = "{$firstName} {$lastName}";
         $rarity = $this->checkRarity($fullName);
 
