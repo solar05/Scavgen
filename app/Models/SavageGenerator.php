@@ -180,12 +180,12 @@ class SavageGenerator
     {
         $firstName = $this->generateFirstName();
         $lastName = $this->generateLastName();
-        
+
         while ($firstName == $lastName) {
             $firstName = $this->generateFirstName();
             $lastName = $this->generateLastName();
         }
-        
+
         $fullName = "{$firstName} {$lastName}";
         $rarity = $this->checkRarity($fullName);
 
