@@ -13,9 +13,11 @@
 }
 
 .scav-back {
-    background-image: url("../images/back.webp");
-    background-repeat: no-repeat;
-    background-size: auto;
+    background: url("../images/back.webp") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .blended-border {
