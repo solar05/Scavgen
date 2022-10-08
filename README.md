@@ -17,6 +17,7 @@
 - `get /api/single` for single scav generation.
 - `get /api/team` for scav team generation.
 - `get /api/stats` for scav generation statistics.
+- `get /api/health` healthcheck endpoint.
 
 ## About Project
 Scavenger names generator. (Escape From Tarkov videogame)
