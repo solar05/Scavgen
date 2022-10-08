@@ -10,7 +10,8 @@ class GeneratorController extends BaseController
 {
     public function health()
     {
-        return response()->json("Ready for action!", 200, [], JSON_UNESCAPED_UNICODE);
+        $stat = Statistic::all()->first();
+        return response()->json("App alive! DB also!", 200, [], JSON_UNESCAPED_UNICODE);
     }
 
     public function generate()
