@@ -3,6 +3,7 @@
     <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Scavenger's name team generator."/>
 
     <title>Scavgen</title>
     <link href="./css/app.css" rel="stylesheet">

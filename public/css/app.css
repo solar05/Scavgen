@@ -1,19 +1,19 @@
 @font-face {
     font-family: "BenderRegular";
-    src: url("fonts/bender.regular.otf") format("opentype");
+    src: url("../fonts/bender.regular.otf") format("opentype");
     font-style: normal;
     font-weight: normal;
 }
 
 @font-face {
     font-family: "BenderBold";
-    src: url("fonts/bender.bold.otf") format("opentype");
+    src: url("../fonts/bender.bold.otf") format("opentype");
     font-style: normal;
     font-weight: normal;
 }
 
 .scav-back {
-    background: url("images/back.webp") no-repeat center center fixed;
+    background: url("../images/back.webp") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -38,7 +38,7 @@
 
 .blended {
     font-family: "BenderBold";
-    src: url("fonts/bender.bold.otf") format("opentype");
+    src: url("../fonts/bender.bold.otf") format("opentype");
     font-style: normal;
     font-weight: normal;
     color: #a5a5a5;
@@ -47,7 +47,7 @@
 .blended-reg-bg {
     font-family: "BenderRegular";
     font-size: 250%;
-    src: url("./fonts/bender.regular.otf") format("opentype");
+    src: url("../fonts/bender.regular.otf") format("opentype");
     font-style: normal;
     font-weight: normal;
     color: #a5a5a5;
@@ -55,7 +55,7 @@
 
 .blended-nav {
     font-family: "BenderBold";
-    src: url("fonts/bender.bold.otf") format("opentype");
+    src: url("../fonts/bender.bold.otf") format("opentype");
     font-style: normal;
     font-weight: normal;
     color: #212529 !important;
@@ -64,7 +64,7 @@
 
 .blend-font {
     font-family: "BenderBold";
-    src: url("fonts/bender.bold.otf") format("opentype");
+    src: url("../fonts/bender.bold.otf") format("opentype");
     font-style: normal;
     font-weight: normal;
     color: #fff !important;
@@ -72,7 +72,7 @@
 
 .blended-reg {
     font-family: "BenderRegular";
-    src: url("./fonts/bender.regular.otf") format("opentype");
+    src: url("../fonts/bender.regular.otf") format("opentype");
     font-style: normal;
     font-weight: normal;
     color: #a5a5a5;
