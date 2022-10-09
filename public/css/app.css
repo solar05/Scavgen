@@ -3,6 +3,7 @@
     src: url("../fonts/bender.regular.otf") format("opentype");
     font-style: normal;
     font-weight: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -10,6 +11,7 @@
     src: url("../fonts/bender.bold.otf") format("opentype");
     font-style: normal;
     font-weight: normal;
+    font-display: swap;
 }
 
 .scav-back {
@@ -42,6 +44,7 @@
     font-style: normal;
     font-weight: normal;
     color: #a5a5a5;
+    font-display: swap;
 }
 
 .blended-reg-bg {
@@ -51,6 +54,7 @@
     font-style: normal;
     font-weight: normal;
     color: #a5a5a5;
+    font-display: swap;
 }
 
 .blended-nav {
@@ -60,6 +64,7 @@
     font-weight: normal;
     color: #212529 !important;
     background-color: #d49300 !important;    
+    font-display: swap;
 }
 
 .blend-font {
@@ -68,6 +73,7 @@
     font-style: normal;
     font-weight: normal;
     color: #fff !important;
+    font-display: swap;
 }
 
 .blended-reg {
@@ -76,6 +82,7 @@
     font-style: normal;
     font-weight: normal;
     color: #a5a5a5;
+    font-display: swap;
 }
 
 .legendary {
