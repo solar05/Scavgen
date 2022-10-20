@@ -175,23 +175,24 @@ class SavageGenerator
         return $preparedFirstName;
     }
 
-    protected function generateLastName()
+    protected function generateLastName($firstName)
     {
-        $length = count($this->lastNames);
+        $duplicateLastName = array_search($firstName, $this->lastNames);
+        $duplicatedIndex = $duplicateLastName == false ? -1 : $duplicateLastName;
+        unset($this->lastNames[$duplicatedIndex]);
+
+        $lastNamesPool = array_values($this->lastNames);
+        $length = count($lastNamesPool);
         $number = random_int(0, $length - 1);
-        $lastName = $this->lastNames[$number];
+        $lastName = $lastNamesPool[$number];
+
         return $lastName;
     }
 
     public function generate()
     {
         $firstName = $this->generateFirstName();
-        $lastName = $this->generateLastName();
-
-        while ($firstName == $lastName) {
-            $firstName = $this->generateFirstName();
-            $lastName = $this->generateLastName();
-        }
+        $lastName = $this->generateLastName($firstName);
 
         $fullName = "{$firstName} {$lastName}";
         $rarity = $this->checkRarity($fullName);

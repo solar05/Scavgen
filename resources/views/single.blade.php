@@ -29,7 +29,7 @@
     <noscript><div><img src="https://mc.yandex.ru/watch/70878700" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     @endif
     </head>
-    <body class="scav-back">
+    <body style="background-color: black;" class="scav-back">
     <div class="container">
         <nav class="navbar navbar-expand navbar-light">
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
