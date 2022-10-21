@@ -17,4 +17,4 @@ jobs:
         mkdir ~/.ssh
         echo ${{ secrets.BOT_KEY }} > ~/.ssh/scavgen_deploy_bot
         chmod 600 ~/.ssh/scavgen_deploy_bot
-        ssh -i scavgen_deploy_bot ${{ secrets.BOT_NAME }}@${{ secrets.BOT_SERVER }} ${{ secrerts.DEPLOY_COMMAND }}
+        ssh -i scavgen_deploy_bot ${{ secrets.BOT_NAME }}@${{ secrets.BOT_SERVER }} ${{ secrets.DEPLOY_COMMAND }}
