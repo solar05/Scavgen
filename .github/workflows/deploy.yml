@@ -12,10 +12,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Copy key
+    - name: Deploy scavgen
       run: |
         mkdir ~/.ssh
         echo "${{ secrets.BOT_KEY }}" > ~/.ssh/scavgen_deploy_bot
         chmod 600 ~/.ssh/scavgen_deploy_bot
-        ssh -i scavgen_deploy_bot ${{ secrets.BOT_NAME }}@${{ secrets.BOT_SERVER }} ${{ secrets.DEPLOY_COMMAND }}
+        ssh -i ~/.ssh/scavgen_deploy_bot ${{ secrets.BOT_NAME }}@${{ secrets.BOT_SERVER }} ${{ secrets.DEPLOY_COMMAND }}
         rm ~/.ssh/scavgen_deploy_bot
