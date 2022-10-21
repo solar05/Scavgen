@@ -177,16 +177,12 @@ class SavageGenerator
 
     protected function generateLastName($firstName)
     {
-        $duplicateLastName = array_search($firstName, $this->lastNames);
-        $duplicatedIndex = $duplicateLastName == false ? -1 : $duplicateLastName;
-        unset($this->lastNames[$duplicatedIndex]);
+        $duplicateIndex = array_search($firstName, $this->lastNames);
+        $length = count($this->lastNames);
+        $index = $duplicateIndex == false ?
+            random_int(0, $length - 1) : random_int(0, $duplicateIndex - 1);
 
-        $lastNamesPool = array_values($this->lastNames);
-        $length = count($lastNamesPool);
-        $number = random_int(0, $length - 1);
-        $lastName = $lastNamesPool[$number];
-
-        return $lastName;
+        return $this->lastNames[$index];
     }
 
     public function generate()
