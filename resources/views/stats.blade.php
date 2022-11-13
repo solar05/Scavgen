@@ -13,11 +13,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     
-    <script src="https://unpkg.com/magic-snowflakes/dist/snowflakes.min.js"></script>
-    <script>
-        new Snowflakes();
-    </script>
-    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     @if (App::environment('production'))
     <script type="text/javascript" >
@@ -35,6 +30,10 @@
     @endif
     </head>
     <body style="background-color: black;" class="scav-back">
+    <script src="https://unpkg.com/magic-snowflakes/dist/snowflakes.min.js"></script>
+    <script>
+        new Snowflakes();
+    </script>
     <div class="container">
         <nav class="navbar navbar-expand">
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
