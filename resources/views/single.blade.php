@@ -52,9 +52,20 @@
             <hr class="my-4">
             @switch ($names['rarity'])
                 @case('legendary')
-                <h2 class="text-center blended-reg-bg">{{ $names['fullName'] }}</h2>
+                <h2 class="text-center legendary blended-reg-bg">{{ $names['fullName'] }}</h2>
                 <br>
                 <h2 class="text-center legendary blended-reg-bg">Легендарная находка!</h2>
+
+                <audio id="phrase" autoplay>
+                    <source src="./sounds/fraerok.m4a" type="audio/mpeg">
+                </audio>
+
+                <script>
+                    let audio = document.getElementById("phrase");
+                    if (audio != null) {
+                        audio.volume = 0.5;
+                    }
+                </script>
                 @break
                 @case('epic')
                     <h2 class="text-center blended-reg-bg">{{ $names['fullName'] }}</h2>
