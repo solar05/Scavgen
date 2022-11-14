@@ -6,7 +6,7 @@
     <meta name="description" content="Scavenger's team generator."/>
 
     <title>Scavgen</title>
-    <link href="./css/app.css" rel="stylesheet">
+    <link href="/css/app.css" rel="stylesheet">
     
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">

@@ -1,21 +1,37 @@
 @font-face {
-    font-family: "BenderRegular";
-    src: url("../fonts/bender.regular.otf") format("opentype");
-    font-style: normal;
+    font-family: "Bender";
     font-weight: normal;
-    font-display: swap;
+    src: url("/fonts/bender.regular.otf") format("opentype");
 }
 
 @font-face {
-    font-family: "BenderBold";
-    src: url("../fonts/bender.bold.otf") format("opentype");
-    font-style: normal;
-    font-weight: normal;
-    font-display: swap;
+    font-family: "Bender";
+    font-weight: bold;
+    src: url("/fonts/bender.bold.otf") format("opentype");
+}
+
+body {
+    font: 40px/1.5 "Bender", cursive;
+}
+
+h2 {
+    font-family: "Bender";
+}
+
+h1 {
+    font-family: "Bender";
+}
+
+a {
+    font-family: "Bender";
+}
+
+p {
+    font-family: "Bender";
 }
 
 .scav-back {
-    background: url("../images/back.webp") no-repeat center center fixed;
+    background: url("/images/back.webp") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -39,50 +55,25 @@
 }
 
 .blended {
-    font-family: "BenderBold";
-    src: url("../fonts/bender.bold.otf") format("opentype");
-    font-style: normal;
-    font-weight: normal;
     color: #a5a5a5;
-    font-display: swap;
 }
 
 .blended-reg-bg {
-    font-family: "BenderRegular";
     font-size: 250%;
-    src: url("../fonts/bender.regular.otf") format("opentype");
-    font-style: normal;
-    font-weight: normal;
     color: #a5a5a5;
-    font-display: swap;
 }
 
 .blended-nav {
-    font-family: "BenderBold";
-    src: url("../fonts/bender.bold.otf") format("opentype");
-    font-style: normal;
-    font-weight: normal;
     color: #212529 !important;
     background-color: #d49300 !important;    
-    font-display: swap;
 }
 
 .blend-font {
-    font-family: "BenderBold";
-    src: url("../fonts/bender.bold.otf") format("opentype");
-    font-style: normal;
-    font-weight: normal;
     color: #fff !important;
-    font-display: swap;
 }
 
 .blended-reg {
-    font-family: "BenderRegular";
-    src: url("../fonts/bender.regular.otf") format("opentype");
-    font-style: normal;
-    font-weight: normal;
     color: #a5a5a5;
-    font-display: swap;
 }
 
 .legendary {
