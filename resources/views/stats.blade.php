@@ -13,7 +13,7 @@
             </div>
             <br>
             <p class="lead">
-                <a class="btn btn-blended btn-lg d-flex justify-content-center blended" href="{{ route('stats') }}" role="button">Обновить информацию</a>
+                <a class="btn btn-blended btn-lg d-flex justify-content-center blended" href="{{ route('scav.stats') }}" role="button">Обновить информацию</a>
             </p>
         </div>
     </div>

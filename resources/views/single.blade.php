@@ -45,7 +45,7 @@
             @endswitch
             <br>
             <p class="lead">
-                <a class="btn btn-blended btn-lg d-flex justify-content-center blended" href="{{ route('single') }}" role="button">Сгенерировать</a>
+                <a class="btn btn-blended btn-lg d-flex justify-content-center blended" href="{{ route('scav.single') }}" role="button">Сгенерировать</a>
             </p>
         </div>
     </div>

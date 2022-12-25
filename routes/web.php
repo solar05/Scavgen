@@ -15,7 +15,7 @@ use App\Http\Controllers\PageController;
 |
 */
 
-Route::get('/', [GeneratorController::class, 'generate'])->name('single');
-Route::get('/team', [GeneratorController::class, 'generateTeam'])->name('team');
-Route::get('/stats', [GeneratorController::class, 'statistics'])->name('stats');
+Route::get('/', [GeneratorController::class, 'generate'])->name('scav.single');
+Route::get('/team', [GeneratorController::class, 'generateTeam'])->name('scav.team');
+Route::get('/stats', [GeneratorController::class, 'statistics'])->name('scav.stats');
 Route::get('/robots.txt', [PageController::class, 'robots'])->name('robots');

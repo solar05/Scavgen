@@ -35,11 +35,20 @@
         </script>
             <div class="container">
                 <nav class="navbar navbar-expand navbar-light">
-                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="collapse navbar-collapse">
                         <div class="navbar-nav">
-                            <a class="nav-item nav-link {{ Route::currentRouteName() == 'single' ? 'blended-nav rounded' : 'blend-font' }}" href="{{ route('single') }}">Собрать дикого</a>
-                            <a class="nav-item nav-link {{ Route::currentRouteName() == 'team' ? 'blended-nav rounded' : 'blend-font' }}" href="{{ route('team') }}">Собрать отряд</a>
-                            <a class="nav-item nav-link {{ Route::currentRouteName() == 'stats' ? 'blended-nav rounded' : 'blend-font' }}" href="{{ route('stats') }}">Статистика</a>
+                            <a class="nav-item nav-link {{ Route::currentRouteName() == 'scav.single' ? 'blended-nav rounded' : 'blend-font' }}" href="{{ route('scav.single') }}">Собрать дикого</a>
+                            <a class="nav-item nav-link {{ Route::currentRouteName() == 'scav.team' ? 'blended-nav rounded' : 'blend-font' }}" href="{{ route('scav.team') }}">Собрать отряд</a>
+                            <a class="nav-item nav-link {{ Route::currentRouteName() == 'scav.stats' ? 'blended-nav rounded' : 'blend-font' }}" href="{{ route('scav.stats') }}">Статистика</a>
+                        </div>
+                    </div>
+                    <div class="navbar navbar-expand navbar-light navbar-right">
+                        <div class="navbar-nav">
+                            @if (app()->getLocale() == 'en')
+                                <a class="nav-item nav-link blended-nav rounded" href="{{ url()->current() . '?lang=ru' }}">EN</a>
+                            @elseif (app()->getLocale() == 'ru')
+                                <a class="nav-item nav-link blended-nav rounded" href="{{ url()->current() . '?lang=en' }}">RU</a>
+                            @endif
                         </div>
                     </div>
                 </nav>
