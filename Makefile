@@ -18,4 +18,7 @@ migrate:
 	php artisan migrate
 seed:
 	php artisan db:seed
-
+clear-cache:
+	php artisan view:cache 
+	php artisan config:cache
+	php artisan route:cache

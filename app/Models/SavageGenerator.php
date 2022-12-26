@@ -5,7 +5,7 @@ namespace App\Models;
 class SavageGenerator
 {
     public const TEAM_SIZE = 5;
-    protected $firstNames = [
+    public const RU_FIRST_NAMES = [
         'Христофор', 'Илья', 'Сеня', 'Жека', 'Тоха',
         'Олег', 'Константин', 'Андрей', 'Артём', 'Никита',
         'Игорь', 'Витёк', 'Гога', 'Савелий', 'Вова', 'Ярик',
@@ -45,7 +45,7 @@ class SavageGenerator
         'Рафаэль'
     ];
 
-    protected $lastNames = [
+    public const RU_LAST_NAMES = [
         'Работник', 'Программист', 'Тридемакс', 'Дотер',
         'Тиктокер', 'Ястреб', 'Ненаркоторговец', 'Очко',
         'Петух', 'Шиза', 'Пошлый', 'Заднеприводной', 'Заводской',
@@ -155,7 +155,7 @@ class SavageGenerator
         'Ниндзя', 'Вайб', 'Щенок', 'Стелс', 'Бомбардировщик',
         'Газ', 'Вонь', 'Запашок', 'Эрудит', 'Балаболкин'
     ];
-    protected $legendaryNames = [
+    public const RU_LEGENDARY_NAMES = [
         'Олег Пошлый', 'Вова Вист', 'Илья Торч', 'Джек Воробей', 'Бока Жока',
         'Илья Кальяньщик', 'Илья Заводской', 'Андрей Выходной', 'Илья Косипоша',
         'Артёмка Жмых', 'Костян Тыкволобик', 'Гит Пуш', 'Кабан Кабанчик',
@@ -167,31 +167,31 @@ class SavageGenerator
         'Жак Пиджак'
     ];
 
-    protected function generateFirstName()
+    public static function generateFirstName()
     {
-        $length = count($this->firstNames);
+        $length = count(self::RU_FIRST_NAMES);
         $number = random_int(0, $length - 1);
-        $preparedFirstName = ucfirst(strtolower($this->firstNames[$number]));
+        $preparedFirstName = ucfirst(strtolower(self::RU_FIRST_NAMES[$number]));
         return $preparedFirstName;
     }
 
-    protected function generateLastName($firstName)
+    public static function generateLastName($firstName)
     {
-        $duplicateIndex = array_search($firstName, $this->lastNames);
-        $length = count($this->lastNames);
+        $duplicateIndex = array_search($firstName, self::RU_LAST_NAMES);
+        $length = count(self::RU_LAST_NAMES);
         $index = $duplicateIndex == false ?
             random_int(0, $length - 1) : random_int(0, $duplicateIndex - 1);
 
-        return $this->lastNames[$index];
+        return self::RU_LAST_NAMES[$index];
     }
 
-    public function generate()
+    public static function generate()
     {
-        $firstName = $this->generateFirstName();
-        $lastName = $this->generateLastName($firstName);
+        $firstName = self::generateFirstName();
+        $lastName = self::generateLastName($firstName);
 
         $fullName = "{$firstName} {$lastName}";
-        $rarity = $this->checkRarity($fullName);
+        $rarity = self::checkRarity($fullName);
 
         return ['firstName' => $firstName,
                 'lastName' => $lastName,
@@ -199,23 +199,13 @@ class SavageGenerator
                 'rarity' => $rarity];
     }
 
-    public function listFirstNames()
-    {
-        return $this->firstNames;
-    }
-
-    public function listLastNames()
-    {
-        return $this->lastNames;
-    }
-
-    public function generateTeam($teamSize = SavageGenerator::TEAM_SIZE)
+    public static function generateTeam($teamSize = SavageGenerator::TEAM_SIZE)
     {
         $alreadyGenerated = [];
         $namesList = [];
 
         while (count($namesList) != $teamSize) {
-            $names = $this->generate();
+            $names = self::generate();
             $fullName = $names['fullName'];
             if (!in_array($fullName, $alreadyGenerated)) {
                 $namesList[] = $names;
@@ -225,12 +215,12 @@ class SavageGenerator
         return $namesList;
     }
 
-    protected function isLegendary($fullName)
+    public static function isLegendary($fullName)
     {
-        return in_array($fullName, $this->legendaryNames);
+        return in_array($fullName, self::RU_LEGENDARY_NAMES);
     }
 
-    protected function isEpic($fullName)
+    public static function isEpic($fullName)
     {
         [$firstName, $secondName] = explode(' ', $fullName);
 
@@ -257,7 +247,7 @@ class SavageGenerator
         return boolval($entry);
     }
 
-    protected function isRare($fullName)
+    public static function isRare($fullName)
     {
         [$firstName, $secondName] = explode(' ', $fullName);
         $firstTerm = mb_strtolower(mb_substr($firstName, 0, 1));
@@ -265,22 +255,22 @@ class SavageGenerator
         return $firstTerm == $secondTerm;
     }
 
-    protected function isUncommon($fullName)
+    public static function isUncommon($fullName)
     {
         [$firstName, $secondName] = explode(' ', $fullName);
         return strlen($firstName) == strlen($secondName);
     }
 
-    public function checkRarity($fullName)
+    public static function checkRarity($fullName)
     {
         $rarity = "common";
-        if ($this->isLegendary($fullName)) {
+        if (self::isLegendary($fullName)) {
              $rarity = "legendary";
-        } elseif ($this->isEpic($fullName)) {
+        } elseif (self::isEpic($fullName)) {
             $rarity = "epic";
-        } elseif ($this->isRare($fullName)) {
+        } elseif (self::isRare($fullName)) {
             $rarity = "rare";
-        } elseif ($this->isUncommon($fullName)) {
+        } elseif (self::isUncommon($fullName)) {
             $rarity = "uncommon";
         }
         return $rarity;

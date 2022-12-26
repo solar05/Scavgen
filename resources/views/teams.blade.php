@@ -57,7 +57,7 @@
             </div>
             <br>
             <p class="lead">
-                <a class="btn btn-blended btn-lg d-flex justify-content-center blended" href="{{ route('scav.team') }}" role="button">Сгенерировать отряд диких</a>
+                <a class="btn btn-blended btn-lg d-flex justify-content-center blended" href="{{ route('scav.team') }}" role="button">{{ __('messages.generate.team') }}</a>
             </p>
         </div>
     </div>

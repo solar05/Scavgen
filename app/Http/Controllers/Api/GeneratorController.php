@@ -16,16 +16,14 @@ class GeneratorController extends BaseController
 
     public function generate()
     {
-        $generator = new SavageGenerator();
-        $names = $generator->generate();
+        $names = SavageGenerator::generate();
         Statistic::updateRarity($names['rarity']);
         return response()->json(["scavenger" => $names], 200, [], JSON_UNESCAPED_UNICODE);
     }
 
     public function generateTeam()
     {
-        $generator = new SavageGenerator();
-        $names = $generator->generateTeam();
+        $names = SavageGenerator::generateTeam();
         $rarityCount = Statistic::collectScavRarity($names);
         Statistic::updateMultipleRarity($rarityCount);
         return response()->json(["scavengers" => $names], 200, [], JSON_UNESCAPED_UNICODE);

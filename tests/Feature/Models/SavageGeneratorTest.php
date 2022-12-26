@@ -14,11 +14,10 @@ class SavageGeneratorTest extends TestCase
     public function setUp(): void
     {
         parent::setUp();
-        $this->generator = new SavageGenerator();
     }
     public function testSavageNameGeneration()
     {
-        $names = $this->generator->generate();
+        $names = SavageGenerator::generate();
         assertTrue(is_array($names));
         assertTrue(key_exists("firstName", $names));
         assertTrue(key_exists("lastName", $names));
@@ -28,7 +27,7 @@ class SavageGeneratorTest extends TestCase
 
     public function testSavageTeamGeneration()
     {
-        $names = $this->generator->generateTeam();
+        $names = SavageGenerator::generateTeam();
         $teamSize = SavageGenerator::TEAM_SIZE;
         assertTrue(is_array($names));
         $this->assertEquals(count($names), $teamSize, "Incorrect team generation size!");
@@ -36,8 +35,8 @@ class SavageGeneratorTest extends TestCase
 
     public function testUniqNames()
     {
-        $firstNames = $this->generator->listFirstNames();
-        $lastNames = $this->generator->listLastNames();
+        $firstNames = SavageGenerator::RU_FIRST_NAMES;
+        $lastNames = SavageGenerator::RU_LAST_NAMES;
         $uniqFirstNames = array_unique($firstNames);
         $uniqLastNames = array_unique($lastNames);
         $this->assertEquals($firstNames, $uniqFirstNames, "First names have duplicates! Remove names with `-` sign!");
@@ -46,8 +45,8 @@ class SavageGeneratorTest extends TestCase
 
     public function testNamesNaming()
     {
-        $firstNames = $this->generator->listFirstNames();
-        $lastNames = $this->generator->listLastNames();
+        $firstNames = SavageGenerator::RU_FIRST_NAMES;
+        $lastNames = SavageGenerator::RU_LAST_NAMES;
         $pregRegular = function ($name) {
             return boolval(preg_match('/^[a-z-а-яё]+$/iu', $name));
         };
@@ -60,24 +59,24 @@ class SavageGeneratorTest extends TestCase
     public function testEpicRarity()
     {
         $name = "Яшка Полторашка";
-        $this->assertEquals($this->generator->checkRarity($name), "epic");
+        $this->assertEquals(SavageGenerator::checkRarity($name), "epic");
     }
 
     public function testLegendaryRarity()
     {
         $name = "Гит Пуш";
-        $this->assertEquals($this->generator->checkRarity($name), "legendary");
+        $this->assertEquals(SavageGenerator::checkRarity($name), "legendary");
     }
 
     public function testRareRarity()
     {
         $name = "Гагик Глазастый";
-        $this->assertEquals($this->generator->checkRarity($name), "rare");
+        $this->assertEquals(SavageGenerator::checkRarity($name), "rare");
     }
 
     public function testUncommonRarity()
     {
         $name = "Назар Бобик";
-        $this->assertEquals($this->generator->checkRarity($name), "uncommon");
+        $this->assertEquals(SavageGenerator::checkRarity($name), "uncommon");
     }
 }

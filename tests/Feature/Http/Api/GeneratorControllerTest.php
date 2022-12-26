@@ -11,28 +11,28 @@ class GeneratorControllerTest extends TestCase
      *
      * @return void
      */
-    public function testBasicApiTest()
+    public function testBasicApi()
     {
         $response = $this->get(route('api.single'));
         $response->assertStatus(200);
         $response->assertHeader("Content-Type", "application/json");
     }
 
-    public function testApiHealthTest()
+    public function testApiHealth()
     {
         $response = $this->get(route('api.health'));
         $response->assertStatus(200);
         $response->assertHeader("Content-Type", "application/json");
     }
 
-    public function testTeamApiTest()
+    public function testTeamApi()
     {
         $response = $this->get(route('api.team'));
         $response->assertStatus(200);
         $response->assertHeader("Content-Type", "application/json");
     }
 
-    public function testStatsApiTest()
+    public function testStatsApi()
     {
         $response = $this->get(route('api.stats'));
         $response->assertStatus(200);

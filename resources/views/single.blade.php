@@ -9,7 +9,7 @@
                 @case('legendary')
                 <h2 class="text-center legendary blended-reg-bg">{{ $names['fullName'] }}</h2>
                 <br>
-                <h2 class="text-center legendary blended-reg-bg">Легендарная находка!</h2>
+                <h2 class="text-center legendary blended-reg-bg">{{ __('messages.rarity.legendary.find') }}</h2>
 
                 <audio id="phrase" autoplay>
                     <source src="./sounds/fraerok.m4a" type="audio/mpeg">
@@ -25,27 +25,27 @@
                 @case('epic')
                     <h2 class="text-center blended-reg-bg">{{ $names['fullName'] }}</h2>
                     <br>
-                    <h2 class="text-center epic blended-reg-bg">Эпическая находка!</h2>
+                    <h2 class="text-center epic blended-reg-bg">{{ __('messages.rarity.epic.find') }}</h2>
                 @break
                 @case('rare')
                     <h2 class="text-center blended-reg-bg">{{ $names['fullName'] }}</h2>
                     <br>
-                    <h2 class="text-center text-primary blended-reg-bg">Редкая находка!</h2>
+                    <h2 class="text-center text-primary blended-reg-bg">{{ __('messages.rarity.rare.find') }}</h2>
                 @break
                 @case('uncommon')
                     <h2 class="text-center blended-reg-bg">{{ $names['fullName'] }}</h2>
                     <br>
-                    <h2 class="text-center uncommon blended-reg-bg">Необычная находка!</h2>
+                    <h2 class="text-center uncommon blended-reg-bg">{{ __('messages.rarity.uncommon.find') }}</h2>
                 @break
                 @default
                     <h2 class="text-center blended-reg-bg">{{ $names['fullName'] }}</h2>
                     <br>
-                    <h2 class="text-center text-secondary blended-reg-bg">Обычный дикий.</h2>
+                    <h2 class="text-center text-secondary blended-reg-bg">{{ __('messages.rarity.common.find') }}</h2>
                 @break
             @endswitch
             <br>
             <p class="lead">
-                <a class="btn btn-blended btn-lg d-flex justify-content-center blended" href="{{ route('scav.single') }}" role="button">{{ __('messages.generate') }}</a>
+                <a class="btn btn-blended btn-lg d-flex justify-content-center blended" href="{{ route('scav.single') }}" role="button">{{ __('messages.generate.single') }}</a>
             </p>
         </div>
     </div>
