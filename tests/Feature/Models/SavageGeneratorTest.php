@@ -4,6 +4,7 @@ namespace Tests\Feature\Models;
 
 use Tests\TestCase;
 use App\Models\SavageGenerator;
+use App\Models\SavageNames;
 
 use function PHPUnit\Framework\assertTrue;
 
@@ -33,8 +34,8 @@ class SavageGeneratorTest extends TestCase
 
     public function testUniqNames()
     {
-        $firstNames = SavageGenerator::RU_FIRST_NAMES;
-        $lastNames = SavageGenerator::RU_LAST_NAMES;
+        $firstNames = SavageNames::RU_FIRST_NAMES;
+        $lastNames = SavageNames::RU_LAST_NAMES;
         $uniqFirstNames = array_unique($firstNames);
         $uniqLastNames = array_unique($lastNames);
         $this->assertEquals($firstNames, $uniqFirstNames, "First names have duplicates! Remove names with `-` sign!");
@@ -43,8 +44,8 @@ class SavageGeneratorTest extends TestCase
 
     public function testNamesNaming()
     {
-        $firstNames = SavageGenerator::RU_FIRST_NAMES;
-        $lastNames = SavageGenerator::RU_LAST_NAMES;
+        $firstNames = SavageNames::RU_FIRST_NAMES;
+        $lastNames = SavageNames::RU_LAST_NAMES;
         $pregRegular = function ($name) {
             return boolval(preg_match('/^[a-z-а-яё]+$/iu', $name));
         };
