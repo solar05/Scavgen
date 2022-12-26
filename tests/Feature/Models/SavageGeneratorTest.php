@@ -9,8 +9,6 @@ use function PHPUnit\Framework\assertTrue;
 
 class SavageGeneratorTest extends TestCase
 {
-    protected $generator;
-
     public function setUp(): void
     {
         parent::setUp();
@@ -60,6 +58,9 @@ class SavageGeneratorTest extends TestCase
     {
         $name = "Яшка Полторашка";
         $this->assertEquals(SavageGenerator::checkRarity($name), "epic");
+
+        $notEpicName = "Яшка Пол";
+        $this->assertNotEquals(SavageGenerator::checkRarity($notEpicName), "epic");
     }
 
     public function testLegendaryRarity()

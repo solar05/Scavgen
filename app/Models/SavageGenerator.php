@@ -215,12 +215,12 @@ class SavageGenerator
         return $namesList;
     }
 
-    public static function isLegendary($fullName)
+    private static function isLegendary($fullName)
     {
         return in_array($fullName, self::RU_LEGENDARY_NAMES);
     }
 
-    public static function isEpic($fullName)
+    private static function isEpic($fullName)
     {
         [$firstName, $secondName] = explode(' ', $fullName);
 
@@ -247,7 +247,7 @@ class SavageGenerator
         return boolval($entry);
     }
 
-    public static function isRare($fullName)
+    private static function isRare($fullName)
     {
         [$firstName, $secondName] = explode(' ', $fullName);
         $firstTerm = mb_strtolower(mb_substr($firstName, 0, 1));
@@ -255,7 +255,7 @@ class SavageGenerator
         return $firstTerm == $secondTerm;
     }
 
-    public static function isUncommon($fullName)
+    private static function isUncommon($fullName)
     {
         [$firstName, $secondName] = explode(' ', $fullName);
         return strlen($firstName) == strlen($secondName);
