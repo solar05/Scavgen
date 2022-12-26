@@ -37,9 +37,9 @@
                 <nav class="navbar navbar-expand navbar-light">
                     <div class="collapse navbar-collapse">
                         <div class="navbar-nav">
-                            <a class="nav-item nav-link {{ Route::currentRouteName() == 'scav.single' ? 'blended-nav rounded' : 'blend-font' }}" href="{{ route('scav.single') }}">Собрать дикого</a>
-                            <a class="nav-item nav-link {{ Route::currentRouteName() == 'scav.team' ? 'blended-nav rounded' : 'blend-font' }}" href="{{ route('scav.team') }}">Собрать отряд</a>
-                            <a class="nav-item nav-link {{ Route::currentRouteName() == 'scav.stats' ? 'blended-nav rounded' : 'blend-font' }}" href="{{ route('scav.stats') }}">Статистика</a>
+                            <a class="nav-item nav-link {{ Route::currentRouteName() == 'scav.single' ? 'blended-nav rounded' : 'blend-font' }}" href="{{ route('scav.single') }}">{{ __('messages.generate.single') }}</a>
+                            <a class="nav-item nav-link {{ Route::currentRouteName() == 'scav.team' ? 'blended-nav rounded' : 'blend-font' }}" href="{{ route('scav.team') }}">{{ __('messages.generate.team') }}</a>
+                            <a class="nav-item nav-link {{ Route::currentRouteName() == 'scav.stats' ? 'blended-nav rounded' : 'blend-font' }}" href="{{ route('scav.stats') }}">{{ __('messages.stats') }}</a>
                         </div>
                     </div>
                     <div class="navbar navbar-expand navbar-light navbar-right">

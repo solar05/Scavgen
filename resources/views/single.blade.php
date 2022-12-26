@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="jumbotron">
-            <h1 class="display-4 text-center blended">Генератор имен диких!</h1>
+            <h1 class="display-4 text-center blended">{{ __('messages.single.head') }}</h1>
             <hr class="my-4">
             @switch ($names['rarity'])
                 @case('legendary')
@@ -45,7 +45,7 @@
             @endswitch
             <br>
             <p class="lead">
-                <a class="btn btn-blended btn-lg d-flex justify-content-center blended" href="{{ route('scav.single') }}" role="button">Сгенерировать</a>
+                <a class="btn btn-blended btn-lg d-flex justify-content-center blended" href="{{ route('scav.single') }}" role="button">{{ __('messages.generate') }}</a>
             </p>
         </div>
     </div>

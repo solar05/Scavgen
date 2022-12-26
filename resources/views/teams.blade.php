@@ -3,7 +3,7 @@
 @section('content')
     <div class="container border border-dark rounded">
         <div class="jumbotron">
-            <h1 class="display-4 text-center blended">Генератор отряда диких!</h1>
+            <h1 class="display-4 text-center blended">{{ __('messages.team.head') }}</h1>
             <div class="border border-dark rounded">
                 @foreach ($namesList as $names)
                     @if ($loop->last)
