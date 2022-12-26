@@ -26,6 +26,7 @@
         });
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/70878700" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <meta name="yandex-verification" content="b190b1610cb41872" />
     @endif
     </head>
     <body style="background-color: black;" class="scav-back">
