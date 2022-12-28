@@ -38,7 +38,7 @@ class SavageGenerator
         $lastName = self::generateLastName($firstName, $preparedLocale);
 
         $fullName = "{$firstName} {$lastName}";
-        $rarity = self::checkRarity($fullName);
+        $rarity = self::checkRarity($fullName, $preparedLocale);
 
         return ['firstName' => $firstName,
                 'lastName' => $lastName,
@@ -63,7 +63,7 @@ class SavageGenerator
         return $namesList;
     }
 
-    private static function isLegendary($fullName, $locale = 'RU')
+    private static function isLegendary($fullName, $locale = 'ru')
     {
         $preparedLocale = self::prepareLocale($locale);
         return in_array($fullName, constant("App\Models\SavageNames::{$preparedLocale}_LEGENDARY_NAMES"));
@@ -110,10 +110,11 @@ class SavageGenerator
         return strlen($firstName) == strlen($secondName);
     }
 
-    public static function checkRarity($fullName)
+    public static function checkRarity($fullName, $locale = 'ru')
     {
         $rarity = "common";
-        if (self::isLegendary($fullName)) {
+        $preparedLocale = self::prepareLocale($locale);
+        if (self::isLegendary($fullName, $preparedLocale)) {
              $rarity = "legendary";
         } elseif (self::isEpic($fullName)) {
             $rarity = "epic";
