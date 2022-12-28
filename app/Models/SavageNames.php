@@ -299,7 +299,7 @@ class SavageNames
         'Analyst', 'Uruguay', 'Fork', 'Grundel', 'Fiver',
         'Cap', 'Dabstep', 'Dancer', 'Pot', 'Cuckoo',
         'Sloboda', 'Tambov', 'Bishkek', 'Nickelbeck', 'Amogus',
-        'Zakvaska', 'Pivasik', 'Yaichko', 'Dracula', 'Krovosos', 'Pivososos',
+        'Zakvaska', 'Pivasik', 'Yaichko', 'Dracula', 'Krovosos', 'Beersucker',
         'Beerosaurus', 'Whey', 'Ambrosius-Cousto', 'Sunset', 'Barankin',
         'Bagel', 'Hooker', 'Sherman', 'Churchill', 'Variety', 'Medium', 'Valve',
         'Peacemaker', 'Blame', 'Kurdyuk', 'Kumys', 'Cornish', 'Horney', 'Root',
