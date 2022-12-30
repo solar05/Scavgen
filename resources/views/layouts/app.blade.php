@@ -54,6 +54,30 @@
                     </div>
                 </nav>
             </div>
+            <button id="phrase-button" style="display: none"></button>
+            <audio id="phrase">
+                    <source src="./sounds/fraerok.m4a" type="audio/mpeg">
+            </audio>
+
+            <script>
+                const playButton = document.getElementById("phrase-button");
+
+                playButton.addEventListener("click", () => {
+                    triggerLegendarySound();
+                });
+
+                function triggerLegendarySound() {
+                    let audio = document.getElementById("phrase");
+                    if (audio != null) {
+                        audio.volume = 0.4;
+                        audio.play();
+                    }
+                }
+
+                function playLegendarySound() {
+                    playButton.click();
+                }
+            </script>
             <br>
         @yield('content')
     </body>
