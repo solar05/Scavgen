@@ -30,10 +30,6 @@
     @endif
     </head>
     <body style="background-color: black;" class="scav-back">
-        <script src="https://unpkg.com/magic-snowflakes/dist/snowflakes.min.js"></script>
-        <script>
-            new Snowflakes();
-        </script>
             <div class="container">
                 <nav class="navbar navbar-expand navbar-light">
                     <div class="collapse navbar-collapse">
