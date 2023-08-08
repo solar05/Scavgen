@@ -17,7 +17,7 @@ class GeneratorController extends BaseController
 
     public function generateTeam()
     {
-        $names = SavageGenerator::generateTeam(app()->getLocale());
+        $names = SavageGenerator::generateTeam(app()->getLocale(), 20);
         $rarityCount = Statistic::collectScavRarity($names);
         Statistic::updateMultipleRarity($rarityCount);
         return view('teams', ['namesList' => $names]);

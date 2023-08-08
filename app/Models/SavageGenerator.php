@@ -31,6 +31,18 @@ class SavageGenerator
         return strtoupper($locale);
     }
 
+    private static function sortSavage($team = [])
+    {
+        return if $team == [];
+
+        $legendary = array_filter($team, fn($item) => $item['rarity'] == "legendary");
+        $rare = array_filter($team, fn($item) => $item['rarity'] == "rare");
+        $uncommon = array_filter($team, fn($item) => $item['rarity'] == "uncommon");
+        $common = array_filter($team, fn($item) => $item['rarity'] == "common");
+
+        return array_merge($legendary, $rare, $uncommon, $common);
+    }
+
     public static function generate($locale = 'ru')
     {
         $preparedLocale = self::prepareLocale($locale);
@@ -60,7 +72,7 @@ class SavageGenerator
                 $alreadyGenerated[] = $fullName;
             }
         }
-        return $namesList;
+        return $this->sortSavage($namesList);
     }
 
     private static function isLegendary($fullName, $locale = 'ru')
