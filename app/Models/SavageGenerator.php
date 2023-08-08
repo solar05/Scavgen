@@ -33,10 +33,6 @@ class SavageGenerator
 
     private static function sortSavage($team = [])
     {
-        if $team == [] {
-            return $team;
-        }
-
         $legendary = array_filter($team, fn($item) => $item['rarity'] == "legendary");
         $rare = array_filter($team, fn($item) => $item['rarity'] == "rare");
         $uncommon = array_filter($team, fn($item) => $item['rarity'] == "uncommon");
