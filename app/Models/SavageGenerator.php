@@ -70,7 +70,7 @@ class SavageGenerator
                 $alreadyGenerated[] = $fullName;
             }
         }
-        return $this->sortSavage($namesList);
+        return self::sortSavage($namesList);
     }
 
     private static function isLegendary($fullName, $locale = 'ru')
