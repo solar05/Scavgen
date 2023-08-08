@@ -34,11 +34,12 @@ class SavageGenerator
     private static function sortSavage($team = [])
     {
         $legendary = array_filter($team, fn($item) => $item['rarity'] == "legendary");
+        $epic = array_filter($team, fn($item) => $item['rarity'] == "epic");
         $rare = array_filter($team, fn($item) => $item['rarity'] == "rare");
         $uncommon = array_filter($team, fn($item) => $item['rarity'] == "uncommon");
         $common = array_filter($team, fn($item) => $item['rarity'] == "common");
 
-        return array_merge($legendary, $rare, $uncommon, $common);
+        return array_merge($legendary, $epic, $rare, $uncommon, $common);
     }
 
     public static function generate($locale = 'ru')
