@@ -1,20 +1,20 @@
-name: Deploy
+# name: Deploy
 
-on:
-  push:
-    branches:
-      - 'master'
-jobs:
-  deploy-scavgen:
+# on:
+#   push:
+#     branches:
+#       - 'master'
+# jobs:
+#   deploy-scavgen:
 
-    runs-on: ubuntu-latest
+#     runs-on: ubuntu-latest
 
-    steps:
-    - name: Deploy scavgen
-      run: |
-        mkdir ~/.ssh
-        echo "${{ secrets.BOT_KEY }}" > ~/.ssh/scavgen_deploy_bot
-        ssh-keyscan -H "${{ secrets.BOT_SERVER }}" > ~/.ssh/known_hosts
-        chmod 600 ~/.ssh/scavgen_deploy_bot
-        ssh -i ~/.ssh/scavgen_deploy_bot ${{ secrets.BOT_NAME }}@${{ secrets.BOT_SERVER }} ${{ secrets.DEPLOY_COMMAND }}
-        rm -r ~/.ssh
+#     steps:
+#     - name: Deploy scavgen
+#       run: |
+#         mkdir ~/.ssh
+#         echo "${{ secrets.BOT_KEY }}" > ~/.ssh/scavgen_deploy_bot
+#         ssh-keyscan -H "${{ secrets.BOT_SERVER }}" > ~/.ssh/known_hosts
+#         chmod 600 ~/.ssh/scavgen_deploy_bot
+#         ssh -i ~/.ssh/scavgen_deploy_bot ${{ secrets.BOT_NAME }}@${{ secrets.BOT_SERVER }} ${{ secrets.DEPLOY_COMMAND }}
+#         rm -r ~/.ssh
