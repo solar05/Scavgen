@@ -2,6 +2,9 @@
 ![Deploy](https://github.com/solar05/Scavgen/actions/workflows/deploy.yml/badge.svg)
 [![Maintainability](https://api.codeclimate.com/v1/badges/b4dfb987e53526f51301/maintainability)](https://codeclimate.com/github/solar05/Scavgen/maintainability)
 [![codecov](https://codecov.io/gh/solar05/Scavgen/branch/master/graph/badge.svg?token=QA2GS6MX3M)](https://codecov.io/gh/solar05/Scavgen)
+
+# Project no longer maintained, [hew brand version here](https://github.com/solar05/neuro_scav)
+
 ## Install project
 - `make install` for install dependencies (required php and other default libraries).
 - `make run` for manual run.
